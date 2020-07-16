@@ -1,0 +1,36 @@
+#pageHome {
+    width: 100vw;
+}
+
+#pageHome .cover {
+    width: 100vw;
+
+    background-image: url('../img/maincover.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    padding: 10em 0;
+}
+
+
+#pageHome main > .aboutUs {
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #8b2c2cc7;
+
+}
+
+.aboutUs p {
+    width: 90%;
+
+    font-size: 1.1em;
+    text-align: center;
+    color: #FFF;
+    font-weight: 300;
+
+    padding: 30px 0;
+}

@@ -1,0 +1,182 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* global */
+
+/* font "googleFonts" */
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
+
+html {
+    font-family: 'Comic Neue', cursive;
+}
+
+body {
+    font-size: 18px;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;    
+}
+
+/* header */
+
+header {
+    width: 100%;
+    height: 100px;
+
+    background-color: #4682B4;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* menu */
+
+#menu {
+    width: 90%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* logo */
+
+#menu .logo {
+    background-color: #FFF;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3em;
+    color: #4682B4;
+}
+
+#menu .logo:hover {
+    background-color: #DAA520;
+    color: #000;
+}
+
+
+/* menu */
+
+#menu ul {
+    width: 70%;
+    height: 40%;
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #FFF;
+}
+
+#menu ul li a {
+    color: #4682B4;
+    font-weight: bold;
+    font-size: .9em;
+
+    padding: 10px 67px;
+}
+
+#menu ul li a:hover {
+
+    background-color: #504F4F;
+    
+    border-radius: 12px;
+    color: #FFF;
+}
+
+/* main */
+
+.mainText {
+    width: 100vw;
+    font-size: 1.6em;
+    color: #FFF;
+
+    background-color: #504f4f88;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.cover {
+    width: 100vw;
+
+    background-image: url('../img/maincover.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    padding: 10em 0;
+}
+
+
+/* footer */
+
+footer {
+    width: 100vw;
+    height: 100px;
+
+    background-color: #4682B4;
+}
+
+footer .social {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 10px;
+}
+
+footer .social p {
+    color: #FFF;
+    font-weight: bold;
+}
+
+.social .icons {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-top: 10px;
+}
+
+.social .icons img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+

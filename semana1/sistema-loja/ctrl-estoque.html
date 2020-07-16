@@ -6,111 +6,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Controle de Estoque | FullStack Store Br</title>
+
+
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/ctrl-estoque.css">
+
 </head>
 
 <body>
-    <div>
-        <p>Nome da lojinha</p>
+
+    <header>
+
+        <nav id="menu">
+
+            <div class="logo">
+                <i class="fas fa-user-secret"></i>
+            </div>
+
+            <ul>
+                <!-- links -->
+
+                <li>
+                    <a href="index.html">Página Inicial</a>
+                </li>
+                <li>
+                    <a href="ctrl-estoque.html">Controle de Estoque</a>
+                </li>
+                <li>
+                    <a href="add-produto.html">Adicionar Produto</a>
+                </li>
+                <li>
+                    <a href="funcionarios.html">Funcionários</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cover">
+        <div class="mainText">
+            <h2>FullStack Store Br</h2>
+        </div>
     </div>
 
-    <div>
-        <!-- LINKS -->
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
-    </div>
+    <main>
+        <h2 class="mainText">Controle de Estoque</h2>
+        <table>
+            <tr class="tableheader">
+                <th>Foto</th>
+                <th>Descrição</th>
+                <th>Preço (R$)</th>
+                <th>Quantidade disponível</th>
+            </tr>
 
-    <h2>Controle de Estoque</h2>
+            <tr>
+                <td>
+                    <img src="./img/Almofada-massageadora-speaker-gato-preto.jpg"
+                        alt="Almofada massageadora speaker gato preto">
+                </td>
+                <td>
+                    Para quem gosta de conforto e aconchego (assim como todos os ronrons),
+                    criamos a Almofada Massageadora Speaker Gato Preto! Em formato anatômico.
+                </td>
+                <td>
+                    R$ 200,00
+                </td>
+                <td>
+                    100
+                </td>
+            </tr>
 
-    <table>
-        <tr>
-            <th>Foto</th>
-            <th>Descrição</th>
-            <th>Preço (R$)</th>
-            <th>Quantidade disponível</th>
-        </tr>
+            <tr>
+                <td>
+                    <img src="./img/Apoio-de-pulso.jpg" alt="Apoio de pulso">
+                </td>
+                <td>
+                    Conforto nunca é demais. Por isso você precisa desse apoio de pulso para teclado HyperX Wrist Rest.
+                    Com
+                    tecido de ótima qualidade, ele possui costura anti-ray com bordas reforçadas para evitar que
+                    desgaste e
+                    desfie. A parte interior contém espuma foam memory com infusão de gel, o que garante ergonomia e
+                    baixa
+                    temperatura. Além de ergonômico, o apoio de pulso para teclado HyperX Wrist Rest protege de lesões
+                    por
+                    esforço repetitivo e ajuda na postura. O produto que você procurava para longas horas de jogo é, sem
+                    dúvida, este. Em sua base, uma borracha antideslizante ainda ajuda na acomodação. Durabilidade e
+                    qualidade em um único produto.
+                </td>
+                <td>
+                    R$ 164,59
+                </td>
+                <td>
+                    13
+                </td>
+            </tr>
 
-        <tr>
-            <td>
-                <img src="./img/Almofada-massageadora-speaker-gato-preto.jpg" alt="Almofada massageadora speaker gato preto">
-            </td>
-            <td>
-                Para quem gosta de conforto e aconchego (assim como todos os ronrons),
-                criamos a Almofada Massageadora Speaker Gato Preto! Em formato anatômico.
-            </td>
-            <td>
-                R$ 200,00
-            </td>
-            <td>
-                100
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    <img src="./img/caneca-Café-Pokémon.jpg" alt="Caneca Café Pokémon">
+                </td>
+                <td>
+                    Caneca indispensável para todas as idades, f eita em cerâmica, pode ser usada no microondas.
+                    Dê mais esse toque de humor e personalidade em sua mesa do escritório!
+                </td>
+                <td>
+                    R$ 22,90
+                </td>
+                <td>
+                    657
+                </td>
+            </tr>
 
-        <tr>
-            <td>
-                <img src="./img/Apoio-de-pulso.jpg" alt="Apoio de pulso">
-            </td>
-            <td>
-                Conforto nunca é demais. Por isso você precisa desse apoio de pulso para teclado HyperX Wrist Rest. Com
-                tecido de ótima qualidade, ele possui costura anti-ray com bordas reforçadas para evitar que desgaste e
-                desfie. A parte interior contém espuma foam memory com infusão de gel, o que garante ergonomia e baixa
-                temperatura. Além de ergonômico, o apoio de pulso para teclado HyperX Wrist Rest protege de lesões por
-                esforço repetitivo e ajuda na postura. O produto que você procurava para longas horas de jogo é, sem
-                dúvida, este. Em sua base, uma borracha antideslizante ainda ajuda na acomodação. Durabilidade e
-                qualidade em um único produto.
-            </td>
-            <td>
-                R$ 164,59
-            </td>
-            <td>
-                13
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    <img src="./img/black-panter.jpg" alt="Action Figure Black Panter">
+                </td>
+                <td>
+                    Esse incrível super herói mede aproximadamente 50 cm de altura. Possui 6 pontos de articulação,
+                    feito em
+                    material resistente. As crianças vão amar esse boneco perfeito em tamanho grande. Pantera Negra é o
+                    príncipe T’Challa de Wakanda, que após a morte do seu pai precisa assumir o cargo de governante, mas
+                    encontra sua soberania desafiada por um adversário de longa data em um conflito que tem podem ter
+                    consequências globais. Com a obrigação de proteger e defender Wakanda de interesse externo, pois o
+                    reino
+                    Africano possui a maior riqueza em vibranium, metal só lá encontrado. T’Challa é obrigado a lutar e
+                    defender seu trono, Wakanda forever! Agora pais e filhos vão poder se juntar e brincar e colecionar
+                    os
+                    personagens tão amados da Marvel.
+                </td>
+                <td>
+                    R$ 129,90
+                </td>
+                <td>
+                    200
+                </td>
+            </tr>
 
-        <tr>
-            <td>
-                <img src="./img/caneca-Café-Pokémon.jpg" alt="Caneca Café Pokémon">
-            </td>
-            <td>
-                Caneca indispensável para todas as idades, f eita em cerâmica, pode ser usada no microondas.
-                Dê mais esse toque de humor e personalidade em sua mesa do escritório!
-            </td>
-            <td>
-                R$ 22,90
-            </td>
-            <td>
-                657
-            </td>
-        </tr>
+            <tr>
 
-        <tr>
-            <td>
-                <img src="./img/black-panter.jpg" alt="Action Figure Black Panter">
-            </td>
-            <td>
-                Esse incrível super herói mede aproximadamente 50 cm de altura. Possui 6 pontos de articulação, feito em
-                material resistente. As crianças vão amar esse boneco perfeito em tamanho grande. Pantera Negra é o
-                príncipe T’Challa de Wakanda, que após a morte do seu pai precisa assumir o cargo de governante, mas
-                encontra sua soberania desafiada por um adversário de longa data em um conflito que tem podem ter
-                consequências globais. Com a obrigação de proteger e defender Wakanda de interesse externo, pois o reino
-                Africano possui a maior riqueza em vibranium, metal só lá encontrado. T’Challa é obrigado a lutar e
-                defender seu trono, Wakanda forever! Agora pais e filhos vão poder se juntar e brincar e colecionar os
-                personagens tão amados da Marvel.
-            </td>
-            <td>
-                R$ 129,90
-            </td>
-            <td>
-                200
-            </td>
-        </tr>
+            </tr>
 
-        <tr>
-
-        </tr>
-
-    </table>
+        </table>
+    </main>
 
 </body>
 

@@ -1,0 +1,22 @@
+main .mainText {
+    padding: 50px 0;
+
+    font-size: 1.8em;
+
+}
+
+table {
+    background-color: #4682B4;
+}
+
+.tableheader {
+    background-color: #fff;
+    color: #DAA520;
+}
+
+img {
+    width: 250px;
+    height: 180px;
+
+    object-fit: cover;
+}
