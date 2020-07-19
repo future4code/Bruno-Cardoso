@@ -1,0 +1,132 @@
+/* pageHome-container */
+
+#portfolio-container {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: repeat(4, 25%);
+    grid-template-areas: "sm h"
+                         "sm m"
+                         "sm m"
+                         "sm f";
+    
+    background-color: #7B68EE;    
+}
+
+/* main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+       
+    text-align: center;
+}
+
+/* galleryTitle */
+
+main .projectsDone .titleBox {
+    display: grid;
+    grid-template-columns: repeat(2, .05fr);
+
+    justify-content: center;
+
+
+    width: 100%;
+
+    padding-bottom: 7em;
+}
+
+main .projectsDone .titleBox h2 {
+    font-size: 2em;
+    color: #c0c0c0;
+}
+
+/* galleryTitle icon */
+
+main .projectsDone .titleBox .fa-palette {
+    color: #daa520;
+
+    padding-left: .1em;
+
+    font-size: 2em;
+}
+
+/* galleryTitle borderBottom */
+
+main .projectsDone .titleBox span {
+    border-bottom: 5px solid #c0c0c0;
+
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* boxes */
+
+main .projectsDone .portfolioBoxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.projectsDone .portfolioBoxes .portfolioBox {
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+}
+
+/* immageBox */
+
+.projectsDone .portfolioBox .portfolioImmage {
+    background-color: #ffffff31;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* immageBox pseudoClass hover */
+
+.projectsDone .portfolioBox .portfolioImmage:hover {
+    background-color: #ffffff78;
+    transition: linear 500ms;
+}
+
+/* projectLabenu */
+
+.projectsDone .labenu {
+    border-radius: 0 10px 0 0;
+}
+
+/* projectEcoleta */
+
+.projectsDone .ecoleta {
+    border-radius: 10px 0 0 0;
+}
+
+/* tagImage Configs */
+
+.projectsDone .portfolioBox .portfolioImmage img {
+    width: 250px;
+    height: 200px;
+
+    object-fit: contain;
+}
+
+/* projectsTitle */
+
+.projectsDone .portfolioBox .portfolioBox-title {
+    background-color: #daa520;
+
+    height: 50px;
+    line-height: 50px;
+
+    color: #fff;
+    border-radius: 0;
+}
