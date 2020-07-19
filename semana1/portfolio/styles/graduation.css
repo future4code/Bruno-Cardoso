@@ -1,0 +1,27 @@
+/* graduation-container */
+
+#graduation-container {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: repeat(4, 25%);
+    grid-template-areas: "sm h"
+                         "sm m"
+                         "sm m"
+                         "sm f";
+    
+    background-color: #7B68EE;    
+}
+
+/* main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+       
+    text-align: center;
+}
