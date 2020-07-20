@@ -120,8 +120,7 @@ div:last-child {
 table {
     width: 60%;
 
-    position: relative;
-    right: 55px;
+    margin: 0 auto;
 }
 
 td {
