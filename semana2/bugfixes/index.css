@@ -32,6 +32,8 @@ img {
 div>p:first-child {
     display: block;
     padding-top: 150px;
+    width: 180px;
+    margin: 0 auto;
 }
 
 div img {
