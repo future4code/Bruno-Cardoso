@@ -36,6 +36,14 @@ input {
     width: 500px;
 }
 
+input:hover {
+    opacity: 0.5;
+}
+
+input:active {
+    opacity: 1;
+}
+
 button:focus {
     color: white;
 }
