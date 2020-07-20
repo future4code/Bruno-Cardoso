@@ -1,13 +1,12 @@
-/* pageHome-container */
+/* about-container */
 
 #aboutMe-container {
     width: 100%;
-    height: 100%;
 
     display: grid;
 
     grid-template-columns: 15vw 85vw;
-    grid-template-rows: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25vh);
     grid-template-areas: "sm h"
                          "sm m"
                          "sm m"
@@ -46,6 +45,7 @@ main .centralImmage img {
 
 main .aboutMe-text {
     position: absolute;
+    height: 50%;
 
     width: 37%;
 
@@ -57,4 +57,27 @@ main .aboutMe-text {
     background-color: #00000062;
 
     transition: linear 2s;
+
+    overflow-y: scroll;
+}
+
+main .aboutMe-text p {
+    padding: 1em;
+}
+
+main .aboutMe-text h2 {
+    text-align: center;
+
+    padding: 2em 0;
+}
+
+main .aboutMe-text ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer {
+    padding-top: 2em;
 }

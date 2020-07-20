@@ -1,6 +1,6 @@
-/* graduation-container */
+/* profesional-container */
 
-#graduation-container {
+#profesional-container {
     width: 100%;
     height: 100%;
 
@@ -26,19 +26,19 @@ main {
     text-align: center;
 }
 
-/* graduationsArea */
+/* jobsArea */
 
-main .graduations {
+main .jobs {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-
-    margin: 0 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    
+    padding-left: 20%;
 }
 
-/* graduationsArea li's configs */
+/* jobsArea li's configs */
 
-main .graduations .graduation {    
+main .jobs .job {    
     height: 200px;
     width: 100%;
 
@@ -53,9 +53,9 @@ main .graduations .graduation {
     font-weight: 300;
 }
 
-/* graduationsImmages li */
+/* jobsImmages li */
 
-main .graduations .graduation li:nth-child(1) {
+main .jobs .job li:nth-child(1) {
     width: 400px;
     height: 250px;
 
@@ -67,9 +67,17 @@ main .graduations .graduation li:nth-child(1) {
     cursor: pointer;
 }
 
-/* graduationsImmages configs */
+main .jobs .job li:nth-child(1) h2 {
+    height: 80%;
 
-.graduations .graduation img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* jobsImmages configs */
+
+.jobs .job img {
     width: 380px;
     height: 200px;
 
