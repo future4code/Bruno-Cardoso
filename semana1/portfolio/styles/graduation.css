@@ -1,0 +1,79 @@
+/* graduation-container */
+
+#graduation-container {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-columns: 15vw 85vw;
+    grid-template-rows: repeat(4, 25%);
+    grid-template-areas: "sm h"
+                         "sm m"
+                         "sm m"
+                         "sm f";
+    
+    background-color: #7B68EE;    
+}
+
+/* main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+       
+    text-align: center;
+}
+
+/* graduationsArea */
+
+main .graduations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    margin: 0 20px;
+}
+
+/* graduationsArea li's configs */
+
+main .graduations .graduation {    
+    height: 200px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: #daa520;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+/* graduationsImmages li */
+
+main .graduations .graduation li:nth-child(1) {
+    width: 400px;
+    height: 250px;
+
+    background-color: #c0c0c083;
+
+    border-radius: 12px;
+    margin-bottom: 30px;
+
+    cursor: pointer;
+}
+
+/* graduationsImmages configs */
+
+.graduations .graduation img {
+    width: 380px;
+    height: 200px;
+
+    padding-top: 10px;
+
+    object-fit: contain;
+}

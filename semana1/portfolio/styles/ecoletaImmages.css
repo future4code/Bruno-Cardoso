@@ -1,0 +1,121 @@
+body {
+    background-color: #34cb783b;
+    overflow-y: scroll;
+
+}
+
+#labenuImmages-container {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 0 auto;
+
+    width: 70vw;
+
+}
+
+/* backArrow */
+.fa-arrow-left {
+    font-size: .5em;
+    color: #322153;
+
+    position: relative;
+    right: 40%;
+}
+
+/* header mainTitles */
+
+header .mainTitles {
+    color: #45525b;
+}
+
+/* headerIcon color */
+
+header .mainTitles .fa-laptop-code {
+    color: #34cb79;
+}
+
+/* mainArea */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2em;
+
+}
+
+/* prohectTitles */
+
+main .projectTitles {
+    text-align: center;
+    color: #322153;
+
+    margin-top: 1em;
+}
+
+/* usedTecnologies */
+
+main .projectTitles h3 {
+    margin-top: .7em;    
+    text-transform: uppercase;
+}
+
+/* projectDescription */
+
+main .projectDescription {
+    margin-top: 2em;
+
+    font-size: 1.2em;
+    text-align: justify;
+    font-weight: 300;
+
+    background-color: #ffffff9c;
+
+    width: 66%;
+}
+
+/* projectImmages */
+
+main .projectImmages {
+    width: 66%;
+
+    margin: 1em 0 4em;
+    border-radius: 10px;
+
+    background-color: #a8bac5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* figcaptionsConfigs */
+
+main .projectImmages figcaption {
+    font-weight: bold;
+    color: #322153;
+    text-align: center;
+
+    padding-bottom: 10px;
+}
+
+/* tagImg configs */
+
+main .projectImmages img {
+    width: 750px;
+    height: 400px;
+
+    margin-top: 1em;
+}
+
+/* footerIcons color */
+
+footer .socialIcons i{
+    color: #34cb79;
+
+    padding-bottom: 1em;
+}
+

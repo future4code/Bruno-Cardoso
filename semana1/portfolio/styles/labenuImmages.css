@@ -1,0 +1,121 @@
+body {
+    background-color: #fd7b0249;
+    overflow-y: scroll;
+
+}
+
+#labenuImmages-container {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 0 auto;
+
+    width: 70vw;
+
+}
+
+/* backArrow */
+.fa-arrow-left {
+    font-size: .5em;
+    color: #f47d1f;
+
+    position: relative;
+    right: 40%;
+}
+
+/* header mainTitles */
+
+header .mainTitles {
+    color: #45525b;
+}
+
+/* headerIcon color */
+
+header .mainTitles .fa-laptop-code {
+    color: #a8bac5;
+}
+
+/* mainArea */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2em;
+
+}
+
+/* prohectTitles */
+
+main .projectTitles {
+    text-align: center;
+    color: #f47d1f;
+
+    margin-top: 1em;
+}
+
+/* usedTecnologies */
+
+main .projectTitles h3 {
+    margin-top: .7em;    
+    text-transform: uppercase;
+}
+
+/* projectDescription */
+
+main .projectDescription {
+    margin-top: 2em;
+
+    font-size: 1.2em;
+    text-align: justify;
+    font-weight: 300;
+
+    background-color: #ffffff6e;
+
+    width: 66%;
+}
+
+/* projectImmages */
+
+main .projectImmages {
+    width: 66%;
+
+    margin: 1em 0 4EM;
+    border-radius: 10PX;
+
+    background-color: #a8bac5;
+    ;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* figcaptionsConfigs */
+
+main .projectImmages figcaption {
+    font-weight: bold;
+    color: #f47d1f;
+    text-align: center;
+
+    padding-bottom: 10px;
+
+}
+
+/* tagImg configs */
+
+main .projectImmages img {
+    width: 750px;
+    height: 400px;
+
+    margin-top: 1em;
+}
+
+/* footerIcons color */
+
+footer .socialIcons i{
+    color: #f47d1f;
+
+    padding-bottom: 1em;
+}
+
