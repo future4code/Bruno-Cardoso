@@ -31,6 +31,10 @@ h2 {
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 input {
     height: 20px;
     width: 500px;
@@ -121,6 +125,8 @@ ol li {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
+
+    width: 100%;
 }
 
 
@@ -181,6 +187,9 @@ td button:active {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+
+    display: block;
+    margin: 200px auto 0;
 }
 
 #back-button:hover {
