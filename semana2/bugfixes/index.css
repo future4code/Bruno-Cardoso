@@ -99,6 +99,11 @@ div>p:first-child {
   *
   **/
 
+  div > input[type=text] {
+    border: none;
+    border-bottom: 2px solid #000000;
+  }
+
 div:nth-child(2),
 div:last-child {
     text-align: center;
