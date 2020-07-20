@@ -26,20 +26,19 @@ button:focus {
 }
 
 img {
-    width: 100px;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
 }
 
 div>p:first-child {
     display: block;
     padding-top: 150px;
-        width: 180px;
+    width: 180px;
     margin: 0 auto;
 }
 
-div img {
-    width: 15px;
-    object-fit: contain;
-}
+
 
 .botao-amarelo {
     background-color: #ffaf43;
@@ -64,6 +63,7 @@ div img {
 
 .icone {
     height: 15px;
+    width: 15px;
 }
 
 
@@ -122,6 +122,14 @@ td button {
     border-radius: 5px;
     color: black;
 
+}
+
+td button:hover {
+    background-color: #c7b14f;    
+}
+
+td button:active {
+    color: white;
 }
 
 .container-do-search {
