@@ -1,0 +1,197 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+  /* importação de fonte */
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+  /* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    outline: none;
+
+}
+
+/* gerais */
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    background-color: #fe7e02;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    height: 20px;
+    width: 500px;
+}
+
+input:hover {
+    opacity: 0.5;
+}
+
+input:active {
+    opacity: 1;
+}
+
+button:focus {
+    color: white;
+}
+
+/* imagens */
+
+img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+div>p:first-child {
+    display: block;
+    padding-top: 120px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.botao-amarelo {
+    background-color: #ffaf43;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+
+    display: block;
+    margin: 0 auto;
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+}
+
+.container {
+    height: 500px;
+    text-align: center;
+}
+
+.icone {
+    height: 15px;
+    width: 15px;
+}
+
+
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+    background-color: #2274a5;
+    color: white;
+}
+
+#container-de-descricao>ol {
+    padding: 15px 0px;
+
+    list-style-position: outside;
+    display: inline-block;
+    text-align: center;
+}
+
+ol li {
+    padding-inline-start: 30px;
+}
+
+#container-para-comprar {
+    background-color: #e7eb90;
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 60px;
+
+    width: 100%;
+}
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+  div > input[type=text] {
+    border: none;
+    border-bottom: 2px solid #000000;
+  }
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+}
+
+table {
+    width: 60%;
+
+    margin: 0 auto;
+}
+
+td {
+    text-align: center;
+}
+
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+
+}
+
+td button:hover {
+    background-color: #c7b14f;    
+}
+
+td button:active {
+    color: white;
+}
+
+.container-do-search {
+    margin-top: 20px;
+    height: 100px;
+}
+
+
+#back-button {
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: black;
+
+    display: block;
+    margin: 200px auto 0;
+}
+
+#back-button:hover {
+    background-color: #635a3d
+}
