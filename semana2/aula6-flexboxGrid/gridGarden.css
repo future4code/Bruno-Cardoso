@@ -339,5 +339,8 @@
 
 /* 28ª fase */
 
-
+#garden {
+    display: grid;
+    grid-template: 1fr 50px / 20% 80%
+}
 
