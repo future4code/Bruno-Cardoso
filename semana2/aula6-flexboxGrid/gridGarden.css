@@ -1,0 +1,346 @@
+/* 1ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+  grid-column-start: 3;
+}
+
+/* 2ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#poison {
+  grid-column-start: 5;
+}
+
+/* 3ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* 4ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+    grid-column-start: 5;
+    grid-column-end: 2;
+}
+
+/* 5ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+/* 6ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#poison {
+  grid-column-start: -3;
+}
+
+/* 7ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+    grid-column-start: 2;
+    grid-column-end: span 2;
+}
+
+/* 8ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+}
+
+/* 9ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+    grid-column-start: span 3;
+    grid-column-end: 6;
+}
+
+/* 10ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+  grid-column: 4 /span 5 ;
+}
+
+/* 11ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+  grid-column: 2 /span 3;
+}
+
+/* 12ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+   grid-row-start: 3;
+}
+
+/* 13ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+  grid-row: 3 /span 3;
+}
+
+/* 14ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#poison {
+  grid-row: 5;
+  grid-column: 2;
+}
+
+/* 15ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+    grid-row: 1 /span 5;
+    grid-column: 2 /span 4;
+}
+
+/* 16ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+  grid-area: 1 / 2 /4 / 6;
+}
+
+/* 17ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water-1 {
+   grid-area: 1 / 4 / 6 / 5;
+}
+  
+  #water-2 {
+  grid-area: 2 / 3 / 5 / 6;
+  }
+
+/* 18ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+.water {
+   order: 0;
+}
+  
+#poison {
+  order: 1;
+}
+
+/* 19ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+  .water {
+   order: 0;
+}
+  
+.poison {
+  order: -1;
+}
+
+/* 20ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* 21ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+  
+#water {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* 22ª fase */
+
+#garden {
+  display: grid;
+  grid-template-columns: 100px 3em 40%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+/* 23ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+/* 24ª fase */
+
+#garden {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr 50px;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+#water {
+  grid-area: 1 / 1 / 6 / 2;
+}
+
+#poison {
+  grid-area: 1 / 5 / 6 / 6;
+}
+
+/* 25ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 75px 3fr 2fr
+    grid-template-rows: 100%;
+  }
+
+/* 26ª fase */
+
+#garden {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 50fr
+}
+  
+#water {
+    grid-column: 1 / 6;
+    grid-row: 5 / 6;
+}
+
+/* 27ª fase */
+
+#garden {
+  display: grid;
+  grid-template:60% / 200px;
+}
+  
+#water {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* 28ª fase */
+
+#garden {
+    display: grid;
+    grid-template: 1fr 50px / 20% 80%
+}
+
