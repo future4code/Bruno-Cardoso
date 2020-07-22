@@ -1,0 +1,83 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15vh 30vh 40vh 15vh;
+
+    grid-template-areas: "vermelho vermelho vermelho"
+                        "azul amarelo verde"
+                        "preto preto preto"
+                        "branco branco branco";
+}
+
+div {
+    border: 1px solid black;
+}
+
+#first-block {
+    background-color: red;
+
+    grid-area: vermelho;
+}
+
+#blue-container {
+    display: flex;
+    flex-direction: column;
+
+    grid-area: azul;
+}
+
+.blue-block {
+    background-color: blue;
+
+    height: 80%;
+}
+
+#yellow-container {
+    display: flex;
+    flex-direction: column;
+
+    grid-area: amarelo;
+}
+
+.yellow-block {
+    background-color: yellow;
+}
+
+#green-container {
+    display: flex;
+    flex-direction: column;
+
+    grid-area: verde;
+}
+
+.green-block {
+    background-color: green;
+}
+
+#black-container {
+    display: flex;
+
+    grid-area: preto;
+}
+
+.black-block {
+    background-color: black;
+    color: white;
+}
+
+#blackWhites-container {
+    display: flex;
+
+    grid-area: branco;
+}
+
+.white-block {
+    background-color: white;
+}
