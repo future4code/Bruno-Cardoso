@@ -1,0 +1,63 @@
+/* tablets */
+
+@media screen and (min-device-width : 320px) and (max-device-width : 800px) {
+    #page-home {
+        display: flex;
+        flex-direction: column;
+
+        width: 100vw;
+    }
+
+    #page-home header {
+        height: 100px;
+        justify-content: center;
+    }
+
+    header #logo {
+        margin: 1em;
+        width: 5em;
+        height: 5em;
+
+        object-fit: scale-down;
+    }
+
+    header form {
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    form input:focus {
+        transform: none;
+        transition: none;
+        margin: 0;
+    }
+
+    header .fa-search {
+        margin-right: 1em;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    #mainGrid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: 2em 0;
+        width: 90vw;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    footer {
+        height: 100px;
+        text-align: center;
+    }
+}
