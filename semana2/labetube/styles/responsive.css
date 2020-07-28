@@ -1,0 +1,131 @@
+/* tablets */
+
+/* page-home */
+
+@media screen and (min-device-width : 320px) and (max-device-width : 800px) {
+
+    #page-home {
+        display: flex;
+        flex-direction: column;
+
+        width: 100vw;
+    }
+
+    #page-home header {
+        height: 100px;
+        justify-content: center;
+    }
+
+    #page-home header #logo {
+        margin: 1em;
+        width: 5em;
+        height: 5em;
+
+        object-fit: scale-down;
+    }
+
+    #page-home header form {
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    form input:focus {
+        transform: none;
+        transition: none;
+        margin: 0;
+    }
+
+    header .fa-search {
+        margin-right: 1em;
+    }
+
+    #page-home main {
+        display: flex;
+        justify-content: center;
+    }
+
+    #mainGrid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: 2em 0;
+        width: 90vw;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    footer {
+        height: 100px;
+        text-align: center;
+    }
+
+    /* pagina videos */
+
+    #pageVideos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        width: 100%;
+    }
+
+    #pageVideos header {
+        width: 100%;
+        height: 100px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    #pageVideos main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    #pageVideos main #videoContainer {
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+    }
+
+    #pageVideos #videoContainer .tituloVideos {
+        width: 90%;
+    }
+
+
+    #pageVideos video {
+        width: 90%;
+    }
+
+    #pageVideos footer {
+        width: 100%;
+        height: 100px;
+
+        text-align: center;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #pageVideos footer p {
+        display: flex;
+        width: 80%;
+    }
+
+}
+

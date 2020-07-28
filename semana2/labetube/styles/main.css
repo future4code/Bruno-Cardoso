@@ -27,18 +27,6 @@ img {
     height: 100%;
 }
 
-/* pageHome */
-
-#page-home {
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 15vh 70vh 15vh;
-
-    grid-template-areas: "h"
-                         "m"
-                         "f";
-}
-
 /* header */
 
 header {
@@ -101,37 +89,9 @@ form .fa-search {
 main {
     grid-area: m;
     background-color: #a8bac5;
-
 }
 
-#mainGrid {  
-    display: grid;
-    grid-template-columns:repeat(4, 1fr) ;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
-
-    margin: 20px;
-
-}
-
-
-
-.video {
-    background-color: #45525b;
-    text-align: center;
-    color: #a8bac5;
-
-    border-radius: 8px;
-    padding-bottom: 10px;
-}
-
-.video a {
-    color: #a8bac5;
-    font-weight: bold;
-}
-
-
-
+/* footer */
 
 footer {
     grid-area: f;
@@ -147,11 +107,4 @@ footer {
 
 footer a {
     color: #f47d1f;
-}
-
-/* videocontainer */
-
-main #videoContainer {
-    display: flex;
-    justify-content: center;
 }
