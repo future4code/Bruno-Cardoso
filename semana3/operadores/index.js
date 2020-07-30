@@ -136,11 +136,3 @@ Ex 4.
 
         let msgBoasvindas = "O e-mail " + emailDoUsuario + " foi cadastrado com sucesso. " + " Seja bem-vinda(o), " + nomeDoUsuario + "!"
         console.log(msgBoasvindas)
-
-
-
-
-
-    
-
-
