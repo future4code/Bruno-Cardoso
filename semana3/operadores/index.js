@@ -135,6 +135,7 @@ Ex 4.
         let emailDoUsuario = prompt("Qual o seu e-mail?")
 
         let msgBoasvindas = "O e-mail " + emailDoUsuario + " foi cadastrado com sucesso. " + " Seja bem-vinda(o), " + nomeDoUsuario + "!"
+<<<<<<< HEAD
         console.log(msgBoasvindas)
 
         // -------------------------------------- DESAFIOS -------------------------------------------------------
@@ -213,3 +214,6 @@ Ex 4.
         let conversorDeMedidas = Number(prompt("Informe quantas milhas deseja transformar em metros : "))
         let conversao = conversorDeMedidas / 0.00062137
                 console.log(conversao)
+=======
+        console.log(msgBoasvindas)
+>>>>>>> c15d6a8f8d5975f812c98fea88aba0abc061af40
