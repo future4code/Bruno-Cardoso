@@ -137,10 +137,79 @@ Ex 4.
         let msgBoasvindas = "O e-mail " + emailDoUsuario + " foi cadastrado com sucesso. " + " Seja bem-vinda(o), " + nomeDoUsuario + "!"
         console.log(msgBoasvindas)
 
+        // -------------------------------------- DESAFIOS -------------------------------------------------------
+
+/*
+1.
+*/
 
 
+// a.
+        let farenheintToKelvin = (77 - 32) * 5/9 + 273.15
+                console.log(farenheintToKelvin)
+
+// b.
+        let celsiusToFarenheint = (80) * 9/5 + 32
+                console.log(celsiusToFarenheint)
+
+// c.
+        let celsiusToFarenheint2 = (30) * 9/5 + 32
+        let celsiusToKelvin2 = 30 + 273.15
+
+                  console.log(celsiusToFarenheint2, celsiusToKelvin2)
+
+// d.
+        let usuarioDecideATemperatura = Number(prompt("Insira os graus Celsius pra converter em Farenheint : "))
+        let usuarioQuerFarenheint = (usuarioDecideATemperatura) * 9/5 + 32
+                console.log(usuarioQuerFarenheint)
+
+        let usuarioDecideATemperatura = Number(prompt("Insira os graus Celsius pra converter em Kelvin : "))
+        let usuarioQuerKelvin = (usuarioDecideATemperatura) + 273.15
+                console.log(usuarioQuerKelvin)
 
 
-    
+/*
+2.
+*/
 
+// a.
+        let consulmoEnergia =  (280 / 24) * 0.05 * 280
+                console.log(consulmoEnergia)
+        
+// b.
+        let descontoNaConta = consulmoEnergia * 0.15
+        let totalAPagar = consulmoEnergia - descontoNaConta
+                console.log(totalAPagar)
 
+/*
+3.
+*/
+
+// a.
+        let poundsToKilograma = 20 / 2.2046
+                console.log(`20 lb equivalem à ${libraToKilograma} Kg`)
+
+// b.
+        let ozToKilograma = 10.5 / 35.274
+                console.log(`10.5oz equivalem à ${ozToKilograma} Kg`)
+
+// c.
+        let milesToMeters = 100 / 0.00062137
+                console.log(`100mi equivalem a ${milesToMeters} m`)
+        
+// d.
+        let feetToMeters = 50 / 3.2808
+                console.log(`50ft equivalem a ${feetToMeters} m`)
+
+// e.
+        let galaoToLitros = 103.56 * 3.785
+                console.log(`103.56gal equivalem a ${galaoToLitros}`)
+        
+// f.
+        let xicaraToLitros = 450 * 0.24
+                console.log(`450 xic equivalem a ${xicaraToLitros} l`)
+
+// f.
+        let conversorDeMedidas = Number(prompt("Informe quantas milhas deseja transformar em metros : "))
+        let conversao = conversorDeMedidas / 0.00062137
+                console.log(conversao)
