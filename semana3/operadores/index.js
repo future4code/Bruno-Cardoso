@@ -135,7 +135,6 @@ Ex 4.
         let emailDoUsuario = prompt("Qual o seu e-mail?")
 
         let msgBoasvindas = "O e-mail " + emailDoUsuario + " foi cadastrado com sucesso. " + " Seja bem-vinda(o), " + nomeDoUsuario + "!"
-
         console.log(msgBoasvindas)
 
         // -------------------------------------- DESAFIOS -------------------------------------------------------
