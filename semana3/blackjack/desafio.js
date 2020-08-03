@@ -11,3 +11,9 @@
  * 
  */
 
+// combinações que ganham
+combinacaoUsuario = carta1DoComputador.texto + carta2DoUsuario.texto
+combinacaoComputador = carta1DoComputador.texto + carta2DoComputador.texto
+
+usuarioGanhou = (somaUsuario === 21 && somaComputador < 21 || somaUsuario > somaComputador && somaUsuario < 22 && somaUsuario > somaComputador || combinacaoUsuario === "A" + "J" || "A" + "Q" || "A" + "K" || "A" + "10")
+computadorGanhou = (somaComputador === 21 && somaUsuario < 21 || somaComputador > somaUsuario && somaComputador < 22 && somaComputador > somaUsuario || combinacaoComputador === "A" + "J" || "A" + "Q" || "A" + "K" || "A" + "10")
