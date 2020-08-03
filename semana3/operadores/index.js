@@ -135,7 +135,7 @@ Ex 4.
         let emailDoUsuario = prompt("Qual o seu e-mail?")
 
         let msgBoasvindas = "O e-mail " + emailDoUsuario + " foi cadastrado com sucesso. " + " Seja bem-vinda(o), " + nomeDoUsuario + "!"
-<<<<<<< HEAD
+
         console.log(msgBoasvindas)
 
         // -------------------------------------- DESAFIOS -------------------------------------------------------
@@ -193,7 +193,6 @@ Ex 4.
 // b.
         let ozToKilograma = 10.5 / 35.274
                 console.log(`10.5oz equivalem à ${ozToKilograma} Kg`)
-
 // c.
         let milesToMeters = 100 / 0.00062137
                 console.log(`100mi equivalem a ${milesToMeters} m`)
@@ -201,6 +200,7 @@ Ex 4.
 // d.
         let feetToMeters = 50 / 3.2808
                 console.log(`50ft equivalem a ${feetToMeters} m`)
+
 
 // e.
         let galaoToLitros = 103.56 * 3.785
@@ -214,6 +214,3 @@ Ex 4.
         let conversorDeMedidas = Number(prompt("Informe quantas milhas deseja transformar em metros : "))
         let conversao = conversorDeMedidas / 0.00062137
                 console.log(conversao)
-=======
-        console.log(msgBoasvindas)
->>>>>>> c15d6a8f8d5975f812c98fea88aba0abc061af40
