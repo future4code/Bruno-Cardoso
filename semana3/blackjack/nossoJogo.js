@@ -19,9 +19,6 @@ let carta2DoUsuario = comprarCarta()
 let carta1DoComputador = comprarCarta()
 let carta2DoComputador = comprarCarta()
 
-// variável que inicia o loop
-let iniciaJogo = (confirm("Quer iniciar uma nova rodada?"))
-
 // soma das cartas
 let somaUsuario = carta1DoUsuario.valor + carta2DoUsuario.valor
 let somaComputador = carta1DoComputador.valor + carta2DoComputador.valor
@@ -35,35 +32,34 @@ let computadorGanhou = (somaComputador === 21 && somaUsuario < 21 || somaComputa
 // empate
 let empate = (somaUsuario === somaComputador && somaUsuario < 22 && somaComputador < 22)
 
-if (iniciaJogo == false) {
-   console.log("O jogo acabou!")
-}
 
-else {
+// variável que inicia o loop
+let iniciaJogo = (confirm("Quer iniciar uma nova rodada?"))
 
-   while (iniciaJogo) {
+
+if (iniciaJogo === true) {
+   while (usuarioGanhou === false || computadorGanhou === false || empate === false) {
       let daAsCartas = (confirm(`Suas cartas são ${carta1DoUsuario.texto} ${carta2DoUsuario.texto}. A carta revelada do computador é ${carta1DoComputador.texto}.`))
 
       // verificar se : houve ganhador 
 
       // usuário ganha
 
-      if (usuarioGanhou === true) {
-         alert(`Suas cartas são ${carta1DoUsuario.texto} ${carta2DoUsuario.texto}. sua pontuação é ${somaUsuario}. As cartas do computador são ${carta1DoComputador.texto} ${carta2DoComputador.texto}. A pontuação do computador é ${somaComputador}. O usuário ganhou!`)
+      if (usuarioGanhou) {
+         confirm(`Suas cartas são ${carta1DoUsuario.texto} ${carta2DoUsuario.texto}. sua pontuação é ${somaUsuario}. As cartas do computador são ${carta1DoComputador.texto} ${carta2DoComputador.texto}. A pontuação do computador é ${somaComputador}. O usuário ganhou!`)
 
          // computador ganha
 
-      } else if (computadorGanhou === true) {
-         alert(`Suas cartas são ${carta1DoUsuario.texto} ${carta2DoUsuario.texto}. sua pontuação é ${somaUsuario}. As cartas do computador são ${carta1DoComputador.texto} ${carta2DoComputador.texto}. A pontuação do computador é ${somaComputador}. O computador ganhou!`)
+      } else if (computadorGanhou) {
+         confirm(`Suas cartas são ${carta1DoUsuario.texto} ${carta2DoUsuario.texto}. sua pontuação é ${somaUsuario}. As cartas do computador são ${carta1DoComputador.texto} ${carta2DoComputador.texto}. A pontuação do computador é ${somaComputador}. O computador ganhou!`)
 
          // empate
       } else if (empate) {
-         alert(`Suas cartas são ${carta1DoUsuario} ${carta2DoUsuario}. sua pontuação é ${somaUsuario}. As cartas do computador são ${carta1DoComputador} ${carta2DoComputador}. Pontuação do usuário é ${somaUsuario} e a pontuação do computador ${somaComputador}, sendo assim temos um Empate!`)
-
+         confirm(`Suas cartas são ${carta1DoUsuario} ${carta2DoUsuario}. sua pontuação é ${somaUsuario}. As cartas do computador são ${carta1DoComputador} ${carta2DoComputador}. Pontuação do usuário é ${somaUsuario} e a pontuação do computador ${somaComputador}, sendo assim temos um Empate!`)
       } else {
+         iniciaJogo === false
          console.log("O jogo acabou!")
       }
-      alert("O jogo acabou!")
-
    }
+
 }

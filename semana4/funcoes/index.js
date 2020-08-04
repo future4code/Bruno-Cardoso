@@ -199,18 +199,60 @@ console.log(umaMentiraDita10VezesValeMaisQueUmaVerdade("O céu é vermelho"))
 Ex 6.
 */
 
-function verificaQuantidadeDeNumerosDoArray(arrayDeParametro) {
-    for (const numero of arrayDeParametro) {
-    }
-    return arrayDeParametro.length
-
-}
 
 const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
 
-// function verificaArrey(arrayrecebido){
-    //     return arrayrecebido.length
-    // }
-    // const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
-    // const quantidadeDeElementos = verificaArrey(array)
-    // console.log("Quantidade de elementos é:", quantidadeDeElementos)
+// .a
+
+function verificaQuantidadeDeNumerosDoArray(array) {
+    return array.length
+}
+const recebeLengthDoArray = verificaQuantidadeDeNumerosDoArray(array)
+console.log(recebeLengthDoArray)
+
+
+// b.
+
+let recebeUmNumeroPar = 0
+
+function ehParOuNaoeh(umNumero) {
+    umNumero = recebeUmNumeroPar = (Number(prompt("Digite um número : ")))
+    if (umNumero % 2 === 0) {
+        return Boolean(recebeUmNumeroPar)
+    } else
+        console.log(recebeUmNumeroPar === false)
+}
+
+console.log(ehParOuNaoeh(recebeUmNumeroPar))
+
+
+// c.
+
+// const numeroPar = []
+
+// function ehParNoArray(valor) {
+//     for (let valor of array) {
+//         if (valor % 2 === 0) {
+//             numeroPar.push(valor)
+//         }
+//         console.log(numeroPar.length)
+//     }
+// }
+
+// console.log(ehParNoArray(numeroPar))
+
+// d.
+const numeroPar = []
+
+function ehParNoArray(valor) {
+    for (let valor of array) {
+        if (valor % 2 === 0) {
+            numeroPar.push(valor)
+        }
+    let recebeFuncao = ehParOuNaoeh(ehParNoArray)
+    return recebeFuncao
+    }
+}
+
+console.log(ehParNoArray(numeroPar))
+    
