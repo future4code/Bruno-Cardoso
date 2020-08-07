@@ -27,3 +27,19 @@
    atinge nenhum dos cases.*/
 // primeiro console mostra o valor de Ações
 // segundo mostra mensagem de TIPO DE INVESTIMENTO INFORMADO INCORRETO.
+
+
+//Ex 3.
+
+// são declarados 3 arrays
+// o primeiro com números em 14 índices
+// os outros dois vazios.
+/* é iniciado um laço (FOR OF) no qual o loop entra se atingir a condicional (IF) na qual
+   os numeros do array numeros tiverem sua divisão por 2 e o resto igual a 0 */
+// ou seja números pares
+/* o array array1 que estava vazio receberá todos os números pares através do método push que passará cada
+   número par sempre na ultima posição (índice) do array */
+/* se for false entrará no ELSE e passará todos os números impares para o array array2 também utilizando
+   o método push. */
+/* Os 3 consoles mostram respectivamente a quantidade de índices
+   cada array, através do método length e apenas o primeiro acompanha uma mensagem.*/
