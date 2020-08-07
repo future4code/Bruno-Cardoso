@@ -85,10 +85,34 @@ console.log(lacoFor());
 let arrayExemplo = [10, 20, 50, 60, 70, 90];
 
 function forOf() {
-    for(let numero of arrayExemplo) {
-        console.log(arrayExemplo[numero])
-    }
+  for (let numero of arrayExemplo) {
+    console.log(arrayExemplo[numero]);
+  }
 }
 
-console.log(forOf())
+console.log(forOf());
 
+/*Ex 2. Para este exercício considere as seguintes variáveis:
+
+            const booleano1 = true
+            const booleano2 = false
+            const booleano3 = !booleano2 = true
+            const booleano4 = !booleano3 = false
+
+a) booleano1 && booleano2 && !booleano4
+
+b) (booleano1 && booleano2) || !booleano3
+
+c)  (booleano2 || booleano3) && (booleano4 || booleano1)
+
+d) !(booleano2 && booleano3) || !(booleano1 && booleano3)
+
+e) !(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)
+
+*/
+
+// a)  false
+// b)  true
+// c)  true
+// d)  true
+// e)  true
