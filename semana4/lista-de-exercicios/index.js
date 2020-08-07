@@ -43,3 +43,13 @@
    o método push. */
 /* Os 3 consoles mostram respectivamente a quantidade de índices
    cada array, através do método length e apenas o primeiro acompanha uma mensagem.*/
+
+   //Ex 4.
+
+// é declarado um array de numeros
+// São declaradas duas váriáveis que respectivamente recebem o valor Infinity e 0.
+// é iniciado um laço (FOR OF).
+// que tem duas condições (IF)
+// a primeira receberá todos os números a partir do número negativo.
+// a segunda recebera apenas os numeros maiores que 0.
+// Os 2 consoles, mostrará os números respectivamente.
