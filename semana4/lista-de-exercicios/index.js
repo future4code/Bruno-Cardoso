@@ -138,3 +138,37 @@ while (i <= quantidadeDeNumerosPares) {
   i++;
 }
 
+/* 4. Vocês lembram de trigonometria? ~~(Oh, não, trigonometria)~~. Relaxem. O exercício é simples, mas
+      mexe com isso. Veja bem: quando nos ensinam triângulos (uma figura de três lados), nós aprendemos
+      como classifica-los dependendo do tamanho de seus lados. Se um triângulo possuir os **três lados
+      iguais**, ele é chamado de "Equilátero". Se possuir, **dois (e somente 2) lados iguais**, diz-se
+      que ele é "Isósceles". Se os **três lados tiverem medidas diferentes**, ele é "Escaleno". Faça uma
+      função que receba como parâmetro os tamanhos dos três lados do triângulo: `a, b, c`  e retorne se ele
+      é equilátero, isósceles ou escaleno.
+*/
+let a = Number(prompt("digite o numero do primeiro lado do triângulo"))
+let b = Number(prompt("digite o numero do segundo lado do triângulo"))
+let c = Number(prompt("digite o numero do terceeiro lado do triângulo"))
+
+
+function trigonoMetry(a, b, c) {
+  if (a === b && b === c && a === c) {
+    console.log("Equilátero")
+  } if (a === b && b !== c) {
+    console.log("Isóceles")
+  } if (a !== b && b !== c && a !== c){
+    console.log("Escaleno")
+  }
+}
+
+trigonoMetry(a, b, c)
+
+
+/* 5. Faça um programa que, dados dois números
+i. indique qual é o maior,
+
+ii. determine se eles são divisíveis um pelo outro (use o operador `%`) e
+
+iii. determine a diferença entre eles (o resultado deve ser um número positivo sempre)
+
+*/
