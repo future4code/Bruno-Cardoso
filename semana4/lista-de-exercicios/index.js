@@ -146,29 +146,55 @@ while (i <= quantidadeDeNumerosPares) {
       função que receba como parâmetro os tamanhos dos três lados do triângulo: `a, b, c`  e retorne se ele
       é equilátero, isósceles ou escaleno.
 */
-let a = Number(prompt("digite o numero do primeiro lado do triângulo"))
-let b = Number(prompt("digite o numero do segundo lado do triângulo"))
-let c = Number(prompt("digite o numero do terceeiro lado do triângulo"))
-
+let a = Number(prompt("digite o numero do primeiro lado do triângulo"));
+let b = Number(prompt("digite o numero do segundo lado do triângulo"));
+let c = Number(prompt("digite o numero do terceeiro lado do triângulo"));
 
 function trigonoMetry(a, b, c) {
   if (a === b && b === c && a === c) {
-    console.log("Equilátero")
-  } if (a === b && b !== c) {
-    console.log("Isóceles")
-  } if (a !== b && b !== c && a !== c){
-    console.log("Escaleno")
+    console.log("Equilátero");
+  }
+  if (a === b && b !== c) {
+    console.log("Isóceles");
+  }
+  if (a !== b && b !== c && a !== c) {
+    console.log("Escaleno");
   }
 }
 
-trigonoMetry(a, b, c)
-
+trigonoMetry(a, b, c);
 
 /* 5. Faça um programa que, dados dois números
-i. indique qual é o maior,
 
-ii. determine se eles são divisíveis um pelo outro (use o operador `%`) e
+I. indique qual é o maior,
 
-iii. determine a diferença entre eles (o resultado deve ser um número positivo sempre)
+II. determine se eles são divisíveis um pelo outro (use o operador `%`) e
+
+III. determine a diferença entre eles (o resultado deve ser um número positivo sempre)
 
 */
+
+function doisNumeros(a, b) {
+  let a = 15
+  let b = 30
+  let c = a - b
+  let d = b - a
+
+  if (a > b) {
+    console.log(`${a} maior que ${b}`)
+  }
+  if (b > a) {
+    console.log(`${b} maior que ${a}`)
+  }
+  if (a > b && a % b === 0) {
+    console.log(`${a} é divisível por ${b}`)
+  } if(a < b && a % b !== 0) {
+      console.log(`${a} não é divisível por ${b}`)
+  } if(a > b && a - b > 0) {
+      console.log(`A diferença entre eles é ${c}`)
+  } if(b > a && b - a > 0) {
+      console.log(`A diferença entre eles é ${d}`)
+  }
+}
+
+doisNumeros()
