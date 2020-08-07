@@ -14,8 +14,6 @@
 // A constante meuDinheiro recebe a função assumindo um parâmetro ja definido com número 100.
 // o console mostrará o valor da varável meuDinheiro que será 100 * o valor informado pelo usuário.
 
-
-
 //Ex 2.
 
 // Inicia a função
@@ -27,7 +25,6 @@
    atinge nenhum dos cases.*/
 // primeiro console mostra o valor de Ações
 // segundo mostra mensagem de TIPO DE INVESTIMENTO INFORMADO INCORRETO.
-
 
 //Ex 3.
 
@@ -44,7 +41,7 @@
 /* Os 3 consoles mostram respectivamente a quantidade de índices
    cada array, através do método length e apenas o primeiro acompanha uma mensagem.*/
 
-   //Ex 4.
+//Ex 4.
 
 // é declarado um array de numeros
 // São declaradas duas váriáveis que respectivamente recebem o valor Infinity e 0.
@@ -53,3 +50,45 @@
 // a primeira receberá todos os números a partir do número negativo.
 // a segunda recebera apenas os numeros maiores que 0.
 // Os 2 consoles, mostrará os números respectivamente.
+
+// EXERCÍCIOS DE LÓGICA DE PROGRAMAÇÃO
+
+/*Ex 1. Cite 3 maneiras de se percorrer/iterar uma lista. Faça um programa para exemplificar.*/
+
+// Usando os Laços: WHILE, FOR E FOR OF
+
+// WHILE
+
+function lacoWhile() {
+  let i = 0;
+
+  while (i < 10) {
+    console.log(i);
+
+    i++;
+  }
+}
+
+console.log(lacoWhile());
+
+// FOR
+
+function lacoFor() {
+  for (let i = 0; i < 10; i++) {
+    console.log(i);
+  }
+}
+
+console.log(lacoFor());
+
+// FOR OF
+let arrayExemplo = [10, 20, 50, 60, 70, 90];
+
+function forOf() {
+    for(let numero of arrayExemplo) {
+        console.log(arrayExemplo[numero])
+    }
+}
+
+console.log(forOf())
+
