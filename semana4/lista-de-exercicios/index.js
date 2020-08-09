@@ -241,3 +241,19 @@ ao invés de dividi-los em muitas variáveis.
 */
 
 
+/*Ex 2. Crie uma função chamada criaRetangulo que recebe como parâmetros dois lados
+       (lado1 e lado2) e retorna um objeto com 4 informações: largura (lado1), altura
+       (lado2), perímetro (2 * (lado1 + lado2)) e área (lado1 * lado2).
+*/
+
+const criaRetangulo = (lado1, lado2) => {
+  let retangulo = {
+    largura : lado1,
+    altura : lado2,
+    perimetro : (2 * (lado1 + lado2)),
+    área : (lado1 * lado2)
+  }
+  return retangulo
+}
+
+
