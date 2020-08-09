@@ -138,7 +138,7 @@ while (i <= quantidadeDeNumerosPares) {
   i++;
 }
 
-/* 4. Vocês lembram de trigonometria? ~~(Oh, não, trigonometria)~~. Relaxem. O exercício é simples, mas
+/*Ex 4. Vocês lembram de trigonometria? ~~(Oh, não, trigonometria)~~. Relaxem. O exercício é simples, mas
       mexe com isso. Veja bem: quando nos ensinam triângulos (uma figura de três lados), nós aprendemos
       como classifica-los dependendo do tamanho de seus lados. Se um triângulo possuir os **três lados
       iguais**, ele é chamado de "Equilátero". Se possuir, **dois (e somente 2) lados iguais**, diz-se
@@ -164,7 +164,7 @@ function trigonoMetry(a, b, c) {
 
 trigonoMetry(a, b, c);
 
-/* 5. Faça um programa que, dados dois números
+/*Ex 5. Faça um programa que, dados dois números
 
 I. indique qual é o maior,
 
@@ -175,26 +175,58 @@ III. determine a diferença entre eles (o resultado deve ser um número positivo
 */
 
 function doisNumeros(a, b) {
-  let a = 15
-  let b = 30
-  let c = a - b
-  let d = b - a
+  a = 15;
+  b = 30;
+  let c = a - b;
+  let d = b - a;
 
   if (a > b) {
-    console.log(`${a} maior que ${b}`)
+    console.log(`${a} maior que ${b}`);
   }
   if (b > a) {
-    console.log(`${b} maior que ${a}`)
+    console.log(`${b} maior que ${a}`);
   }
   if (a > b && a % b === 0) {
-    console.log(`${a} é divisível por ${b}`)
-  } if(a < b && a % b !== 0) {
-      console.log(`${a} não é divisível por ${b}`)
-  } if(a > b && a - b > 0) {
-      console.log(`A diferença entre eles é ${c}`)
-  } if(b > a && b - a > 0) {
-      console.log(`A diferença entre eles é ${d}`)
+    console.log(`${a} é divisível por ${b}`);
+  }
+  if (a < b && a % b !== 0) {
+    console.log(`${a} não é divisível por ${b}`);
+  }
+  if (a > b && a - b > 0) {
+    console.log(`A diferença entre eles é ${c}`);
+  }
+  if (b > a && b - a > 0) {
+    console.log(`A diferença entre eles é ${d}`);
   }
 }
 
-doisNumeros()
+doisNumeros();
+
+// EXERCÍCIOS DE FUNÇÃO
+
+/*Ex 1. Escreva uma função que receba um array de números
+  e imprima na tela o segundo maior e o segundo menor número.
+  Em seguida, invoque essa função. (Não é permitido usar funções
+  de ordenação de vetores.)
+*/
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
+/*Ex 2. Escreva uma função não nomeada que faça um 
+  alert("Hello Future4");. Em seguida, invoque essa função.
+*/
+
+const imprima = (msg) => {
+  alert("Hello Future4")
+}
+
+imprima()
+
