@@ -280,4 +280,18 @@ console.log(`Venha assistir ao filme ${filmeFavorito.titulo} de ${filmeFavorito.
   com o nome da pessoa.
   */
 
+  const pessoaQualquer = {
+    nome : 'Bruno da Cruz Cardoso',
+    idade : 28,
+    email : 'bruno.cards27@gmail.com',
+    endereco : 'Rua Sgto Leonardo de Castro Carvalho'
+  }
+
+  const anonimizarPessoa = (nomeAnonimo) => {
+    nome += nomeAnonimo
+  }
+
+  pessoaQualquer.nome = 'ANÔNIMA'
+  console.log(pessoaQualquer)
+
 
