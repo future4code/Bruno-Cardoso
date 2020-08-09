@@ -257,3 +257,27 @@ const criaRetangulo = (lado1, lado2) => {
 }
 
 
+/*Ex 3. Crie um objeto para representar seu filme favorito. Ele deve ter as seguintes
+propriedades: título, ano, diretor e atores/atrizes (lista com pelo menos 2 atores/atrizes).
+Imprima na tela a seguinte string, baseada nos valores do objeto:
+Venha assistir ao filme NOME DO FILME, de ANO, dirigido por DIRETOR e estrelado por ATOR 1,
+ATRIZ 2, ATOR n. A lista de atores/atrizes deve ser impressa inteira, independente do tamanho da lista.
+*/
+
+const filmeFavorito = {
+  titulo : 'The Godfather',
+  ano : 1972,
+  diretor : 'Francis Ford Coppola',
+  atores : ['Al Pacino', 'Marlon Brando'],
+  atrizes : ['Diane Keaton', 'Thalia Shire'],
+}
+
+console.log(`Venha assistir ao filme ${filmeFavorito.titulo} de ${filmeFavorito.ano}, dirigido por ${filmeFavorito.diretor}, e estrelado por ${filmeFavorito.atores}, ${filmeFavorito.atrizes}`)
+
+/*Ex 4. Crie um objeto que represente uma pessoa qualquer, com as propriedades de nome, idade,
+  email e endereco. Crie uma função chamada anonimizarPessoa, que deverá retornar um novo objeto com
+  as mesmas propriedades, mas com a string ANÔNIMO no lugar do nome. O objeto original deve ser mantido
+  com o nome da pessoa.
+  */
+
+
