@@ -230,3 +230,14 @@ const imprima = (msg) => {
 
 imprima()
 
+// EXERCÍCIOS DE OBJETOS
+
+/*Ex 1. Explique com as suas palavras o que são e quando podemos/devemos utilizar arrays e objetos.
+*/
+
+/*
+Podemos usar arrays e objetos quando temos situações na qual precisamos acessar muitos valores de forma organizada
+ao invés de dividi-los em muitas variáveis.
+*/
+
+
