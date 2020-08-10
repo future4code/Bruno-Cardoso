@@ -349,3 +349,16 @@ b) Faça uma função que retorne um novo array só com as crianças/adolescente
     })
 
     console.log(novoArray)
+
+// b)
+
+  let novoArray = arrayDe1a6.map((numeros) => {
+    return numeros * 3
+  })
+
+  let arrayDeStrings = novoArray.map(String)
+
+  console.log(arrayDeStrings)
+
+
+  
