@@ -360,5 +360,15 @@ b) Faça uma função que retorne um novo array só com as crianças/adolescente
 
   console.log(arrayDeStrings)
 
+// c)
 
-  
+    let novoArray = arrayDe1a6.map((numeros) => {
+      if(numeros % 2 === 0) {
+        console.log(`O numero ${numeros} é par`)
+      }
+      else{
+        console.log(`O numero ${numeros} é impar`)
+      }
+    })
+
+
