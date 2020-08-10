@@ -300,16 +300,28 @@ a) Faça uma função que retorne um novo array só com os adultos (pessoas com 
 b) Faça uma função que retorne um novo array só com as crianças/adolescentes (pessoas com idade inferior a 20)
 */
 
-let arrayPessoas = [
-  { nome: "Pedro", idade: 20 },
-  { nome: "João", idade: 10 },
-  { nome: "Paula", idade: 12 },
-  { nome: "Artur", idade: 89 },
-]
+// a)
+      let arrayPessoas = [
+        { nome: "Pedro", idade: 20 },
+        { nome: "João", idade: 10 },
+        { nome: "Paula", idade: 12 },
+        { nome: "Artur", idade: 89 },
+      ]
 
-const callback = (adultos, index, array) => {
-  return adultos.idade > 18  
-}
+      const callback = (adultos, index, array) => {
+        return adultos.idade > 18
+      }
 
-const soAdultos = arrayPessoas.filter(callback)
-console.log(soAdultos)
+      const soAdultos = arrayPessoas.filter(callback)
+      console.log(soAdultos)
+
+
+// b)
+      const callbackCriancas = (criancas, index, array) => {
+        return criancas.idade < 18
+      }
+
+      const soCriancas = arrayPessoas.filter(callbackCriancas)
+      console.log(soCriancas)
+
+
