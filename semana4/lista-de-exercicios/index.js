@@ -325,3 +325,27 @@ b) Faça uma função que retorne um novo array só com as crianças/adolescente
       console.log(soCriancas)
 
 
+
+/*Ex 2. Em todos os itens deste exercício, você terá que escrever uma função cuja entrada
+  seja um array. Para testes, considere: const array = [1, 2, 3, 4, 5, 6].
+
+    a) Escreva uma função que retorne um array com as entradas multiplicadas por 2.
+      Isto é [2, 4, 6, 8, 10, 12].
+
+    b) Escreva uma função que retorne um array com as entradas multiplicadas por 3 e como
+      strings. Isto é: `["3", "6", "9", "15", "18"] 
+
+    c) Escreva uma função que retorne um array de strings dizendo: "${número} é par/impar".
+      Isto é: `["1 é impar", "2 é par", "3 é impar", "4 é par", "5 é impar", "6 é par"]
+
+*/
+
+// a)
+
+    const arrayDe1a6 = [1, 2, 3, 4, 5, 6]
+
+    let novoArray = arrayDe1a6.map((numeros) => {
+      return numeros * 2
+    })
+
+    console.log(novoArray)
