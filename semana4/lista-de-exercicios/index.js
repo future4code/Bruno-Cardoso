@@ -210,36 +210,27 @@ doisNumeros();
   de ordenação de vetores.)
 */
 
-
-
-
-
-
-
 /////////////////////////////////////////////////////////////////////////////////
-
-
 
 /*Ex 2. Escreva uma função não nomeada que faça um 
   alert("Hello Future4");. Em seguida, invoque essa função.
 */
 
 const imprima = (msg) => {
-  alert("Hello Future4")
-}
+  alert("Hello Future4");
+};
 
-imprima()
+imprima();
 
 // EXERCÍCIOS DE OBJETOS
 
 /*Ex 1. Explique com as suas palavras o que são e quando podemos/devemos utilizar arrays e objetos.
-*/
+ */
 
 /*
 Podemos usar arrays e objetos quando temos situações na qual precisamos acessar muitos valores de forma organizada
 ao invés de dividi-los em muitas variáveis.
 */
-
 
 /*Ex 2. Crie uma função chamada criaRetangulo que recebe como parâmetros dois lados
        (lado1 e lado2) e retorna um objeto com 4 informações: largura (lado1), altura
@@ -248,14 +239,13 @@ ao invés de dividi-los em muitas variáveis.
 
 const criaRetangulo = (lado1, lado2) => {
   let retangulo = {
-    largura : lado1,
-    altura : lado2,
-    perimetro : (2 * (lado1 + lado2)),
-    área : (lado1 * lado2)
-  }
-  return retangulo
-}
-
+    largura: lado1,
+    altura: lado2,
+    perimetro: 2 * (lado1 + lado2),
+    área: lado1 * lado2,
+  };
+  return retangulo;
+};
 
 /*Ex 3. Crie um objeto para representar seu filme favorito. Ele deve ter as seguintes
 propriedades: título, ano, diretor e atores/atrizes (lista com pelo menos 2 atores/atrizes).
@@ -265,14 +255,16 @@ ATRIZ 2, ATOR n. A lista de atores/atrizes deve ser impressa inteira, independen
 */
 
 const filmeFavorito = {
-  titulo : 'The Godfather',
-  ano : 1972,
-  diretor : 'Francis Ford Coppola',
-  atores : ['Al Pacino', 'Marlon Brando'],
-  atrizes : ['Diane Keaton', 'Thalia Shire'],
-}
+  titulo: "The Godfather",
+  ano: 1972,
+  diretor: "Francis Ford Coppola",
+  atores: ["Al Pacino", "Marlon Brando"],
+  atrizes: ["Diane Keaton", "Thalia Shire"],
+};
 
-console.log(`Venha assistir ao filme ${filmeFavorito.titulo} de ${filmeFavorito.ano}, dirigido por ${filmeFavorito.diretor}, e estrelado por ${filmeFavorito.atores}, ${filmeFavorito.atrizes}`)
+console.log(
+  `Venha assistir ao filme ${filmeFavorito.titulo} de ${filmeFavorito.ano}, dirigido por ${filmeFavorito.diretor}, e estrelado por ${filmeFavorito.atores}, ${filmeFavorito.atrizes}`
+);
 
 /*Ex 4. Crie um objeto que represente uma pessoa qualquer, com as propriedades de nome, idade,
   email e endereco. Crie uma função chamada anonimizarPessoa, que deverá retornar um novo objeto com
@@ -280,18 +272,44 @@ console.log(`Venha assistir ao filme ${filmeFavorito.titulo} de ${filmeFavorito.
   com o nome da pessoa.
   */
 
-  const pessoaQualquer = {
-    nome : 'Bruno da Cruz Cardoso',
-    idade : 28,
-    email : 'bruno.cards27@gmail.com',
-    endereco : 'Rua Sgto Leonardo de Castro Carvalho'
-  }
+const pessoaQualquer = {
+  nome: "Bruno da Cruz Cardoso",
+  idade: 28,
+  email: "bruno.cards27@gmail.com",
+  endereco: "Rua Sgto Leonardo de Castro Carvalho",
+};
 
-  const anonimizarPessoa = (nomeAnonimo) => {
-    nome += nomeAnonimo
-  }
+const anonimizarPessoa = (nomeAnonimo) => {
+  nome += nomeAnonimo;
+};
 
-  pessoaQualquer.nome = 'ANÔNIMA'
-  console.log(pessoaQualquer)
+pessoaQualquer.nome = "ANÔNIMA";
+console.log(pessoaQualquer);
 
+// EXERCÍCIOS FUNÇÕES DE ARRAY
 
+/*Ex 1. Considere um array com o seguinte formato:
+  [
+	{ nome: "Pedro", idade: 20 },
+	{ nome: "João", idade: 10 },
+	{ nome: "Paula", idade: 12 },
+	{ nome: "Artur", idade: 89 } 
+]
+
+a) Faça uma função que retorne um novo array só com os adultos (pessoas com idade igual ou superior a 20)
+b) Faça uma função que retorne um novo array só com as crianças/adolescentes (pessoas com idade inferior a 20)
+*/
+
+let arrayPessoas = [
+  { nome: "Pedro", idade: 20 },
+  { nome: "João", idade: 10 },
+  { nome: "Paula", idade: 12 },
+  { nome: "Artur", idade: 89 },
+]
+
+const callback = (adultos, index, array) => {
+  return adultos.idade > 18  
+}
+
+const soAdultos = arrayPessoas.filter(callback)
+console.log(soAdultos)
