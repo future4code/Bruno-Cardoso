@@ -6,12 +6,12 @@ function CardPequeno(props) {
     <div className="littlecard-container">
       <div>
         <div className="email">
-          <img src={ props.imagemEmail } />
+          <img src={ props.ImagemEmail } />
           <h4>{props.email}</h4>
         </div>
         
         <div className="address">
-          <img src={props.imagemCasa} />
+          <img src={ props.ImagemEndereco } />
           <p>{ props.endereco }</p>
         </div>
       </div>

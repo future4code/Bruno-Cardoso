@@ -4,6 +4,9 @@ import CardGrande from "./components/CardGrande/CardGrande"
 import ImagemButton from "./components/ImagemButton/ImagemButton"
 import CardPequeno from "./components/CardPequeno/CardPequeno"
 import MinhaFoto from "./img/foto.png"
+import ImagemEmail from "./img/email-xxl.png"
+import ImagemEndereco from "./img/pin-8-xxl.png"
+
 
 function App() {
   return (
@@ -18,9 +21,9 @@ function App() {
 
         <div className="page-section-container">
           <CardPequeno
-            imagemEmail="https://www.iconsdb.com/icons/preview/gray/email-xxl.png"
+            ImagemEmail={ImagemEmail}
             email="bruno.cards27@gmail.com"
-            imagemCasa="https://www.iconsdb.com/icons/preview/gray/pin-8-xxl.png"
+            ImagemEndereco={ImagemEndereco}
             endereco="R Sgto. Leonardo de Castro Carvalho"
           />
         </div>
