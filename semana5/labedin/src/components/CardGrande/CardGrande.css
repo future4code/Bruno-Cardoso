@@ -1,0 +1,33 @@
+.bigcard-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #c0c0c0;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    height: 200px;
+    text-align: justifyd;
+}
+
+.bigcard-container > img {
+    width: 70px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#root > div > div:nth-child(1) > div.bigcard-container > img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+.bigcard-container h4 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.bigcard-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}

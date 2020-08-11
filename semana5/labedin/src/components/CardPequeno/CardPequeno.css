@@ -1,0 +1,43 @@
+.littlecard-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #c0c0c0;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    height: 200px;
+    text-align: justify;
+}
+
+.littlecard-container img {
+    width: 30px;
+}
+
+.littlecard-container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.littlecard-container .email {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.littlecard-container .email h4 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.littlecard-container .address {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.littlecard-container .address img{
+    margin-left: 15px;
+}
