@@ -153,3 +153,201 @@ Ex 7.
         } else {
                 console.log("Escolha outro filme!")
         }
+
+// ------------------------ DESAFIOS ------------------------ >>>>>
+
+// let movieCategory = prompt("Qual o genero do filme que está passando?")
+// let price = Number(prompt("Qual o preço do ingresso?"))
+
+// if (movieCategory === "Fantasia" && price <= 15) {
+//   let snack = prompt("Qual Snack vai comer, pipoca, chocolate, doces?")
+//   console.log("Bom filme!")
+//   console.log(`... com ${snack}`)
+// } else {
+//   console.log("Escolha outro filme :(")
+// }
+
+// Tabela de preços
+
+let nationalSf = {
+        category1: 1320,
+        category2: 880,
+        category3: 550,
+        category4: 220,
+      }
+      
+      let nationalDt = {
+        category1: 660,
+        category2: 440,
+        category3: 330,
+        category4: 170,
+      }
+      
+      let nationalFi = {
+        category1: 1980,
+        category2: 1320,
+        category3: 880,
+        category4: 330,
+      }
+      
+      // solicitações
+      
+      const fullName = prompt("Qual seu nome completo?")
+      const kindOfMatch = prompt(
+        "Escreva as siglas IN para jogo internacional e DO para doméstico: "
+      ).toUpperCase()
+      const qualifyTo = prompt(
+        "Responda 'SF' para Semi final, 'DT' Decisão do terceiro lugar ou 'FI' pra final: "
+      ).toUpperCase()
+      const categoryChoose = Number(prompt("Qual a categoria? 1, 2, 3 ou 4 ?"))
+      
+      const quanty = Number(
+        prompt("Qual a quantidade de ingressos que deseja comprar?")
+      )
+      
+      const priceOfSfCat1 = quanty * nationalSf.category1
+      const priceOfSfCat2 = quanty * nationalSf.category2
+      const priceOfSfCat3 = quanty * nationalSf.category3
+      const priceOfSfCat4 = quanty * nationalSf.category4
+      
+      const priceOfDtCat1 = quanty * nationalDt.category1
+      const priceOfDtCat2 = quanty * nationalDt.category2
+      const priceOfDtCat3 = quanty * nationalDt.category3
+      const priceOfDtCat4 = quanty * nationalDt.category4
+      
+      const priceOfFiCat1 = quanty * nationalFi.category1
+      const priceOfFiCat2 = quanty * nationalFi.category2
+      const priceOfFiCat3 = quanty * nationalFi.category3
+      const priceOfFiCat4 = quanty * nationalFi.category4
+      
+      console.log("---Dados da compra---")
+      console.log(`Nome do cliente: ${fullName}`)
+      
+      if (kindOfMatch === "DO") {
+        console.log("Tipo do jogo : Nacional")
+      } else {
+        console.log("Tipo do jogo : Internacional")
+      }
+      if (qualifyTo === "SF") {
+        console.log("Etapa do jogo: Semi-final")
+      } else if (qualifyTo === "DT") {
+        console.log("Etapa do jogo: Decisão do Terceiro lugar")
+      } else if (qualifyTo === "FI") {
+        console.log("Etapa do jogo: Final")
+      }
+      
+      if (qualifyTo === "SF" || qualifyTo === "FI" || qualifyTo === "DT") {
+        categoryChoose
+      }
+      if (categoryChoose === "1") {
+        console.log("Categoria : 1")
+      } else if (categoryChoose === "2") {
+        console.log("Categoria : 2")
+      } else if (categoryChoose === "3") {
+        console.log("Categoria : 3")
+      } else if (categoryChoose === "4") {
+        console.log("Categoria : 4")
+      }
+      if (
+        categoryChoose === "1" ||
+        categoryChoose === "2" ||
+        categoryChoose === "3" ||
+        categoryChoose === "4"
+      ) {
+        quanty
+      }
+      if (quanty > 0) {
+        console.log(`Categoria : ${categoryChoose}`)
+        console.log(`Quantidade de Ingressos: ${quanty} ingressos`)
+      }
+      console.log("---Valores---")
+      
+      // Semi final Nacional e Internacional
+      
+      if (kindOfMatch === "DO" && qualifyTo === "SF" && categoryChoose === 1) {
+        console.log(`Valor do ingresso : ${nationalSf.category1}`)
+        console.log(`Valor total : ${priceOfSfCat1}`)
+      } else if (kindOfMatch === "DO" && qualifyTo === "SF" && categoryChoose === 2) {
+        console.log(`Valor do ingresso : ${nationalSf.category2}`)
+        console.log(`Valor total : ${priceOfSfCat2}`)
+      } else if (kindOfMatch === "DO" && qualifyTo === "SF" && categoryChoose === 3) {
+        console.log(`Valor do ingresso : ${nationalSf.category3}`)
+        console.log(`Valor total : ${priceOfSfCat3}`)
+      } else if (kindOfMatch === "DO" && qualifyTo === "SF" && categoryChoose === 4) {
+        console.log(`Valor do ingresso : ${nationalSf.category4}`)
+        console.log(`Valor total : ${priceOfSfCat4}`)
+      }
+      
+      if (kindOfMatch === "IN" && qualifyTo === "SF" && categoryChoose === 1) {
+        console.log(`Valor do ingresso : ${nationalSf.category1 / (4.1)}`)
+        console.log(`Valor total : ${priceOfSfCat1 / (4.1)}`)
+      } else if (kindOfMatch === "IN" && qualifyTo === "SF" && categoryChoose === 2) {
+        console.log(`Valor do ingresso : ${nationalSf.category2 / (4.1)}`)
+        console.log(`Valor total : ${priceOfSfCat2 / (4.1)}`)
+      } else if (kindOfMatch === "IN" && qualifyTo === "SF" && categoryChoose === 3) {
+        console.log(`Valor do ingresso : ${nationalSf.category3 / (4.1)}`)
+        console.log(`Valor total : ${priceOfSfCat3 / (4.1)}`)
+      } else if (kindOfMatch === "IN" && qualifyTo === "SF" && categoryChoose === 4) {
+        console.log(`Valor do ingresso : ${nationalSf.category4 / (4.1)}`)
+        console.log(`Valor total : ${priceOfSfCat4 / (4.1)}`)
+      }
+      
+      // Decisão terceiro lugar Nacional e Internacional
+      
+      if (kindOfMatch === "DO" && qualifyTo === "DT" && categoryChoose === 1) {
+        console.log(`Valor do ingresso : ${nationalDt.category1}`)
+        console.log(`Valor total : ${priceOfDtCat1}`)
+      } else if (kindOfMatch === "DO" && qualifyTo === "DT" && categoryChoose === 2) {
+        console.log(`Valor do ingresso : ${nationalDt.category2}`)
+        console.log(`Valor total : ${priceOfDtCat2}`)
+      } else if (kindOfMatch === "DO" && qualifyTo === "DT" && categoryChoose === 3) {
+        console.log(`Valor do ingresso : ${nationalDt.category3}`)
+        console.log(`Valor total : ${priceOfDtCat3}`)
+      } else if (kindOfMatch === "DO" && qualifyTo === "DT" && categoryChoose === 4) {
+        console.log(`Valor do ingresso : ${nationalDt.category4}`)
+        console.log(`Valor total : ${priceOfDtCat4}`)
+      }
+      
+      if (kindOfMatch === "IN" && qualifyTo === "DT" && categoryChoose === 1) {
+        console.log(`Valor do ingresso : ${nationalDt.category1 / (4.1)}`)
+        console.log(`Valor total : ${priceOfDtCat1 / (4.1)}`)
+      } else if (kindOfMatch === "IN" && qualifyTo === "DT" && categoryChoose === 2) {
+        console.log(`Valor do ingresso : ${nationalDt.category2 / (4.1)}`)
+        console.log(`Valor total : ${priceOfDtCat2 / (4.1)}`)
+      } else if (kindOfMatch === "IN" && qualifyTo === "DT" && categoryChoose === 3) {
+        console.log(`Valor do ingresso : ${nationalDt.category3 / (4.1)}`)
+        console.log(`Valor total : ${priceOfDtCat3 / (4.1)}`)
+      } else if (kindOfMatch === "IN" && qualifyTo === "DT" && categoryChoose === 4) {
+        console.log(`Valor do ingresso : ${nationalDt.category4 / (4.1)}`)
+        console.log(`Valor total : ${priceOfDtCat4 / (4.1)}`)
+      }
+      
+      // Final Nacional e Internacional
+      
+      if (kindOfMatch === "DO" && qualifyTo === "FI" && categoryChoose === 1) {
+        console.log(`Valor do ingresso : ${nationalFi.category1}`)
+        console.log(`Valor total : ${priceOfFiCat1}`)
+      } else if (kindOfMatch === "DO" && qualifyTo === "FI" && categoryChoose === 2) {
+        console.log(`Valor do ingresso : ${nationalFi.category2}`)
+        console.log(`Valor total : ${priceOfFiCat2}`)
+      } else if (kindOfMatch === "DO" && qualifyTo === "FI" && categoryChoose === 3) {
+        console.log(`Valor do ingresso : ${nationalFi.category3}`)
+        console.log(`Valor total : ${priceOfFiCat3}`)
+      } else if (kindOfMatch === "DO" && qualifyTo === "FI" && categoryChoose === 4) {
+        console.log(`Valor do ingresso : ${nationalFi.category4}`)
+        console.log(`Valor total : ${priceOfFiCat4}`)
+      }
+      
+      if (kindOfMatch === "IN" && qualifyTo === "FI" && categoryChoose === 1) {
+        console.log(`Valor do ingresso : ${nationalFi.category1 / (4.1)}`)
+        console.log(`Valor total : ${priceOfFiCat1 / (4.1)}`)
+      } else if (kindOfMatch === "IN" && qualifyTo === "FI" && categoryChoose === 2) {
+        console.log(`Valor do ingresso : ${nationalFi.category2 / (4.1)}`)
+        console.log(`Valor total : ${priceOfFiCat2 / (4.1)}`)
+      } else if (kindOfMatch === "IN" && qualifyTo === "FI" && categoryChoose === 3) {
+        console.log(`Valor do ingresso : ${nationalFi.category3 / (4.1)}`)
+        console.log(`Valor total : ${priceOfFiCat3 / (4.1)}`)
+      } else if (kindOfMatch === "IN" && qualifyTo === "FI" && categoryChoose === 4) {
+        console.log(`Valor do ingresso : ${nationalFi.category4 / (4.1)}`)
+        console.log(`Valor total : ${priceOfFiCat4 / (4.1)}`)
+      }
