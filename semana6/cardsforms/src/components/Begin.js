@@ -5,9 +5,8 @@ export class Begin extends React.Component {
   render() {
     return (
       <div>
+        <h1>ETAPA 1 - DADOS GERAIS</h1>
         <form>
-          <h1>ETAPA 1 - DADOS GERAIS</h1>
-
           <h3>1. Qual o seu nome?</h3>
           <input></input>
 
