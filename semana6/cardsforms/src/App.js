@@ -5,7 +5,28 @@ import SecondStep from "./components/SecondStep";
 import ThirdStep from "./components/ThirdStep";
 import Congrats from "./components/Congrats";
 
-class App extends React.Component {
+const ContainerApp = styled.div`
+  max-width: 1920px;
+  height: 100vh;
+  width: 100%;
+  background-color: #e57373;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
+
+const BtnProximaEtapa = styled.button`
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #7f8c8d;
+  outline: none;
+  font-size: 30px;
+  margin-top: 70px;
+`;
+
+export class App extends React.Component {
   state = {
     step: 1,
   };
@@ -30,10 +51,12 @@ class App extends React.Component {
   render() {
     if (this.state.step <= 3) {
       return (
-        <div>
+        <ContainerApp>
           {this.stepRender()}
-          <button onClick={this.nextStep}>Proxima etapa</button>
-        </div>
+          <BtnProximaEtapa onClick={this.nextStep}>
+            Proxima etapa
+          </BtnProximaEtapa>
+        </ContainerApp>
       );
     } else {
       return <div>{this.stepRender()}</div>;
