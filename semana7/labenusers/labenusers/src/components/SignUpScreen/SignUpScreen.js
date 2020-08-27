@@ -2,9 +2,7 @@ import React from "react";
 import ShowUsers from "../ShowUsers/ShowUsers";
 
 export class SignUpScreen extends React.Component {
-  state = {
-    
-  };
+  state = {};
 
   render() {
     return (
