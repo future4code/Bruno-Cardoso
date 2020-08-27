@@ -9,12 +9,32 @@ const AppContainer = styled.div`
 `;
 
 export class App extends React.Component {
+  state = {
+    currentPage: "signUpScreen",
+  };
+
+  // função que faz, ao clicar do botão trocar a renderização por uma condição
+  // renderização condicional
+  changePage = () => {
+    // ternário
+    this.state.currentPage === "signUpScreen"
+      ? this.setState({ currentPage: "showUsers" })
+      : this.setState({ currentPage: "signUpScreen" });
+  };
+
   render() {
+    // função que seta a renderização atual da página por uma condicional IF.
+    const currentPage = () => {
+      if (this.state.currentPage === "signUpScreen") {
+        return <SignUpScreen />;
+      } else if (this.state.currentPage === "showUsers") {
+        return <ShowUsers />;
+      }
+    };
     return (
       <AppContainer>
-        <SignUpScreen />
-        TESTE
-        <ShowUsers />
+        {currentPage()}
+        <button onClick={this.changePage}> Trocar de página </button>
       </AppContainer>
     );
   }

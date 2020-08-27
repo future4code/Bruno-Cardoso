@@ -1,11 +1,22 @@
-import React from 'react'
+import React from "react";
 
 export class ShowUsers extends React.Component {
-    render() {
-        return(
-            ShowUsers
-        )
-    }
+  state = {
+    users: [
+      {
+        id: 1,
+        name: "Batman",
+      },
+      {
+        id: 2,
+        name: "Robin",
+      },
+    ],
+  };
+
+  render() {
+    return <div></div>;
+  }
 }
 
 export default ShowUsers;
