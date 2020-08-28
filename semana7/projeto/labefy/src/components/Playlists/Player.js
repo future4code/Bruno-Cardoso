@@ -13,6 +13,7 @@ const PlayerContainer = styled.div`
 const PlayerControls = styled.audio`
   width: 98%;
 `;
+
 export class Player extends React.Component {
   render() {
     return (

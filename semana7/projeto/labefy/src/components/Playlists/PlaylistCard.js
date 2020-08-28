@@ -12,7 +12,7 @@ const PlaylistCardContainer = styled.div`
   justify-content: center;
   border: 2px solid #000000;
 `;
-const TituloPlaylist = styled.h2`
+const CardPlaylistTitle = styled.h2`
   margin-right: 10px;
   width: 95%;
 `;
@@ -23,7 +23,7 @@ export class PlaylistCard extends React.Component {
       <PlaylistContainer>
         <PlaylistCardContainer>
           <ul>
-            <TituloPlaylist>NOME DA PLAYLIST</TituloPlaylist>
+            <CardPlaylistTitle>NOME DA PLAYLIST</CardPlaylistTitle>
             <li>NomeDaMusica</li>
             <li>NomeDaMusica</li>
             <li>NomeDaMusica</li>
