@@ -1,36 +1,40 @@
 import React from "react";
-import axios from "axios";
 import styled from "styled-components";
 import logo from "../../img/logo.png";
-import person from "../../img/matches.svg";
+import matchesIcone from "../../img/matches.svg";
 
-const Headder = styled.header`
-  width: 100%;
+const ContainerHeader = styled.header`
+  width: 90%;
   height: 70px;
-
   display: flex;
   justify-content: space-evenly;
 `;
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`;
 const Img = styled.img`
-  width: 20vw;
-  margin-left: 30px;
+  width: 16vw;
+  margin-left: 5vw;
   object-fit: contain;
 `;
 const Icone = styled.img`
-  width: 30px;
+  width: 25px;
+  margin-left: 2.5vw;
   cursor: pointer;
 `;
-const Header = (props) => {
 
+const Header = (props) => {
   return (
     <>
-      <Headder>
-        <Img src={logo} />
-        <Icone src={person}
-        onClick={props.mudarPagina}
-
-        />
-      </Headder>
+      <ContainerHeader>
+        <Container>
+          <Img src={logo} />
+          <Icone src={matchesIcone} onClick={props.mudarPagina} />
+        </Container>
+      </ContainerHeader>
     </>
   );
 };

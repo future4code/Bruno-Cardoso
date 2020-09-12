@@ -6,15 +6,10 @@ import FrameMatches from "./components/FrameMatches/FrameMatches";
 import styled from "styled-components";
 import { baseUrl, choosePerson, clear } from "./apiRequests/apiRequests";
 
-const BotaoLimparMatches = styled.button`
-  position: absolute;
-  left: 10vw;
-  bottom: 5vh;
-`;
 const Container = styled.div`
   width: 30vw;
   height: 95vh;
-  border: 3px solid #000000;
+  border: 2px solid #000000;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -92,7 +87,6 @@ const App = (props) => {
         <Header mudarPagina={mudarPagina} />
         {paginaAtual()}
       </Container>
-      <BotaoLimparMatches>Limpar Matches</BotaoLimparMatches>
     </>
   );
 };

@@ -12,4 +12,4 @@ export const choosePerson =
 
 // Clear
 export const clear =
-  "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/clear";
+  "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/bruno/clear";

@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "../Header/Header";
+import clean from "../../img/clear.svg";
 import styled from "styled-components";
 import { getMatches, clear } from "../../apiRequests/apiRequests";
 
-
-const BotaoLimparMatches = styled.button`
+const LimparMatches = styled.img`
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border: 1px solid #c5c5c5;
+  border-radius: 50%;
+  background-color: #dcdde1;
   position: absolute;
-  left: 10vw;
+  left: 20vw;
   bottom: 5vh;
+  cursor: pointer;
 `;
 const MainContainer = styled.main`
   width: 90%;
@@ -29,10 +36,11 @@ const ItemDaLista = styled.li`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  overflow: hidden;
 `;
 const ImagemMatch = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   object-fit: cover;
   border-radius: 100%;
 `;
@@ -43,18 +51,16 @@ const TextoLista = styled.p`
 `;
 const FrameMatches = (props) => {
   const [matches, setMatches] = useState([]);
-  const [limpar, setLimpar] = useState([]);
 
   useEffect(() => {
     getAllMatches();
-  }, [setMatches]);
+  }, [matches]);
 
   const getAllMatches = () => {
     axios
       .get(getMatches)
       .then((response) => {
         setMatches(response.data.matches);
-        console.log(response.data.matches);
       })
       .catch((err) => {
         console.log(err);
@@ -67,10 +73,9 @@ const FrameMatches = (props) => {
         "Content-Type": "application/json",
       },
     };
-    axios.put(clear, headers).then((response) => {
-      setLimpar(response);
-      console.log(response)
-    });
+    axios
+      .put(clear, headers)
+      .then((response) => {}, alert("Contatinhos apagados com sucesso"));
   };
 
   return (
@@ -88,8 +93,8 @@ const FrameMatches = (props) => {
             </>
           );
         })}
-      </MainContainer>      
-      <BotaoLimparMatches onClick={() => limparMatches()}>Limpar Matches</BotaoLimparMatches>
+      </MainContainer>
+      <LimparMatches src={clean} onClick={() => limparMatches()} />
     </>
   );
 };
