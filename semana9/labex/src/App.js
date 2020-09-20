@@ -1,11 +1,12 @@
 import React from "react";
+import Router from "../src/Router/Router";
 
 const App = () => {
-    return(
-     <>
-     APP JS
-     </>
-    )
+  return (
+    <>
+      <Router />
+    </>
+  );
 };
 
 export default App;

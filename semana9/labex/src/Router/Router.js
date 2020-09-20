@@ -1,8 +1,8 @@
 import React from "react";
-import HomePage from "";
-import AdmLoginPage from "";
-import CandidateSignUpPage from "";
-import TripsPage from "";
+import HomePage from "../pages/HomePage/";
+import AdmLoginPage from "../pages/AdmLoginPage/";
+import CandidateSignUpPage from "../pages/CandidateSignUpPage/";
+import TripsPage from "../pages/TripsPage/";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
