@@ -4,7 +4,7 @@ import AdmLoginPage from "../pages/AdmLoginPage/";
 import CandidateSignUpPage from "../pages/CandidateSignUpPage/";
 import TripsPage from "../pages/TripsPage/";
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 const Router = () => {
   return (
