@@ -3,6 +3,7 @@ import HomePage from "../pages/HomePage/";
 import AdmLoginPage from "../pages/AdmLoginPage/";
 import CandidateSignUpPage from "../pages/CandidateSignUpPage/";
 import TripsPage from "../pages/TripsPage/";
+import TripDetailsPage from "../pages/TripDetailsPage/";
 
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
@@ -21,6 +22,9 @@ const Router = () => {
         </Route>
         <Route exact path="/viagens">
           <TripsPage />
+        </Route>
+        <Route exact path="/viagens/detalhes">
+          <TripDetailsPage />
         </Route>
       </Switch>
     </BrowserRouter>
