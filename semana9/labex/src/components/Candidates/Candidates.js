@@ -9,7 +9,13 @@ const Candidates = (props) => {
         <List>
           <Title>Candidat@s</Title>
           {props.candidates.map((candidateInfo) => {
-            return <CandidateInfo Name={"Nome:"} candidates={candidateInfo} />;
+            return (
+              <CandidateInfo
+                Name={"Nome:"}
+                candidates={candidateInfo}
+                decideCandidate={props.decideCandidate}
+              />
+            );
           })}
         </List>
       </ContentContainer>

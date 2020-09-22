@@ -11,7 +11,7 @@ const TripDetailsPage = () => {
   const [trip, setTrip] = useState();
   const params = useParams();
 
-  useEffect(() => {
+  const getTripDetail = () => {
     axios
       .get(`${baseUrl}/trip/${params.tripId}`, {
         headers: {
@@ -24,7 +24,33 @@ const TripDetailsPage = () => {
       .catch((error) => {
         alert("Erro ao aprovar o candidato");
       });
+  };
+
+  useEffect(() => {
+    getTripDetail();
   }, []);
+
+  const decideCandidate = (acept, candidatesId) => {
+    const body = {
+      approve: acept,
+    };
+    axios
+      .put(
+        `${baseUrl}/trips/${params.tripId}/candidates/${candidatesId}/decide`,
+        body,
+        {
+          headers: {
+            auth: window.localStorage.getItem("token"),
+          },
+        }
+      )
+      .then((response) => {
+        getTripDetail();
+      })
+      .catch((error) => {
+        alert("Erro ao tentar decidir se o candidat@ irá ou não!");
+      });
+  };
 
   return (
     <>
@@ -35,7 +61,10 @@ const TripDetailsPage = () => {
         <MainContainer>
           <ContainerTripDetails>
             <DetailsTrips details={trip} />
-            <Candidates candidates={trip.candidates} />
+            <Candidates
+              candidates={trip.candidates}
+              decideCandidate={decideCandidate}
+            />
           </ContainerTripDetails>
         </MainContainer>
       ) : (
