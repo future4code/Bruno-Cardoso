@@ -14,7 +14,7 @@ const Trips = () => {
           <TripsTitle>Lista de Viagens</TripsTitle>
           {trips.map((trip) => {
             return (
-              <Link to={"/viagens/detalhes"}>
+              <Link to={`/viagens/detalhes/${trip.id}`}>
                 <Trip>
                   <Button>{trip.name}</Button>
                 </Trip>

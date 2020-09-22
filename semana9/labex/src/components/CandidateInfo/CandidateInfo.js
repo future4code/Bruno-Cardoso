@@ -7,7 +7,7 @@ const CandidateInfo = (props) => {
     <>
       <ListItem>
         <Bold>{props.Name}</Bold>
-        <Text>{props.Text}</Text>
+        <Text>{props.candidates.name}</Text>
         <BoxIcons>
           <CheckIcon boxSize={20} color={"green"} />
           <CloseIcon boxSize={16} color={"red"} />

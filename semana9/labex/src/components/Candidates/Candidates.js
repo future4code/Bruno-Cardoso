@@ -2,17 +2,15 @@ import React from "react";
 import CandidateInfo from "../CandidateInfo/CandidateInfo";
 import { ContentContainer, List, Title } from "../DetailsTrips/styles";
 
-const Candidates = () => {
+const Candidates = (props) => {
   return (
     <>
       <ContentContainer>
         <List>
           <Title>Candidat@s</Title>
-
-          <CandidateInfo Name={"Nome:"} Text={"Bruno"} />
-          <CandidateInfo Name={"Nome:"} Text={"Bruno"} />
-          <CandidateInfo Name={"Nome:"} Text={"Bruno"} />
-          <CandidateInfo Name={"Nome:"} Text={"Bruno"} />
+          {props.candidates.map((candidateInfo) => {
+            return <CandidateInfo Name={"Nome:"} candidates={candidateInfo} />;
+          })}
         </List>
       </ContentContainer>
     </>
