@@ -5,11 +5,12 @@ import { Title, TitleContainer } from "../TripsPage/styles";
 import { ContainerTripDetails, MainContainer } from "./styles";
 import axios from "axios";
 import { baseUrl } from "../../requisitions/apiRequisitions";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory, useParams } from "react-router-dom/";
 
 const TripDetailsPage = () => {
   const [trip, setTrip] = useState();
   const params = useParams();
+  const history = useHistory;
 
   const getTripDetail = () => {
     axios
@@ -25,6 +26,13 @@ const TripDetailsPage = () => {
         alert("Erro ao aprovar o candidato");
       });
   };
+
+  useEffect(() => {
+    const token = window.localStorage.getItem("token");
+
+    if (!token) {
+    }
+  });
 
   useEffect(() => {
     getTripDetail();
