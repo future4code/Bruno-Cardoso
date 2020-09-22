@@ -28,6 +28,24 @@ export const InputTrips = styled.input`
   font-size: 20px;
 `;
 
+export const SelectTrips = styled.select`
+  width: 30vw;
+  height: 7vh;
+  padding: 0 10px;
+  border: 2px solid #000;
+  border-radius: 12px;
+  font-size: 20px;
+`;
+
+export const OptionTrips = styled.option`
+  width: 30vw;
+  height: 7vh;
+  padding: 0 10px;
+  border: 2px solid #000;
+  border-radius: 12px;
+  font-size: 20px;
+`;
+
 export const ButtonTrips = styled.button`
   width: 20vw;
   height: 7vh;
