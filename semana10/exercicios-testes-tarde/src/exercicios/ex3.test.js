@@ -56,7 +56,7 @@ describe("Checa itens duplicados", () => {
     expect(resultado).toEqual(true);
   });
 
-  test("retorna true para array de itens triplicados", () => {
+  test("Não identifica duplicados em array de triplicados", () => {
     const arrayDeTriplicados = [7, 7, 7];
     const resultado = checaItensDuplicados(arrayDeTriplicados);
     expect(resultado).toEqual(true);
