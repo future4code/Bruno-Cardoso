@@ -1,5 +1,4 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import FeedPosts from "../screens/FeedPosts";
 import HomePage from "../screens/HomePage";

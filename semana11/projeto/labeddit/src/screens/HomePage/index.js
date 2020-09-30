@@ -1,18 +1,24 @@
 import React from "react";
-import TextField from "@material-ui/core/TextField";
-import FormControl from "@material-ui/core/FormControl";
-import { Button } from "@material-ui/core";
+import labedditlogo from "../../assets/labedditlogo.svg";
+import { Button, Link, TextField, Typography } from "@material-ui/core";
+import { Form, LinkTo, Logo, MainContainer } from "./styled";
 
 const HomePage = () => {
   return (
     <>
-      <FormControl>
-        <TextField label="E-mail" variant="outlined" type="email" />
-        <TextField label="Senha" variant="outlined" type="password" />
-        <Button variant="contained" color="primary">
-          Entrar
-        </Button>
-      </FormControl>
+      <MainContainer>
+        <Logo src={labedditlogo} alt={"logo labeddit"} />
+        <Form>
+          <TextField label="E-mail" variant="outlined" type="email" />
+          <TextField label="Senha" variant="outlined" type="password" />
+          <Button variant="contained" color="primary">
+            Entrar
+          </Button>
+        </Form>
+        <Typography variant="body1">
+          Ou então <LinkTo variant="body1"> cadastre-se</LinkTo>
+        </Typography>
+      </MainContainer>
     </>
   );
 };
