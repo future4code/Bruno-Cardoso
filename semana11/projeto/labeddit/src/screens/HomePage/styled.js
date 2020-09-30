@@ -10,16 +10,16 @@ export const MainContainer = styled(Container)`
 
 export const Form = styled(FormControl)`
   width: 40vw;
-  margin: 10vh 0;
   display: flex;
+  margin: 5vh 0 7vh 0;
   gap: 20px;
 `;
 
 export const Logo = styled.img`
-  min-width: 25vw;
+  min-width: 35vw;
   width: 25vw;
-  margin-top: 10vh;
-  object-fit: cover;
+  margin: 7vh 0;
+  object-fit: contain;
 `;
 
 export const LinkTo = styled(Link)`

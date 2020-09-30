@@ -8,6 +8,7 @@ const HomePage = () => {
     <>
       <MainContainer>
         <Logo src={labedditlogo} alt={"logo labeddit"} />
+        <Typography variant="h6">Faça já seu Login</Typography>
         <Form>
           <TextField label="E-mail" variant="outlined" type="email" />
           <TextField label="Senha" variant="outlined" type="password" />
@@ -16,7 +17,7 @@ const HomePage = () => {
           </Button>
         </Form>
         <Typography variant="body1">
-          Ou então <LinkTo variant="body1"> cadastre-se</LinkTo>
+          Ou<LinkTo variant="body1"> cadastre-se</LinkTo>
         </Typography>
       </MainContainer>
     </>
