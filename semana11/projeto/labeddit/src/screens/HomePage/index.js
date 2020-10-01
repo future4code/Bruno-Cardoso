@@ -1,7 +1,7 @@
 import React from "react";
 import labedditlogo from "../../assets/labedditlogo.svg";
 import { Button, TextField, Typography } from "@material-ui/core";
-import { Form, LinkTo, Logo, MainContainer } from "./styled";
+import { Form, LinkTo, Logo, MainContainer } from "./styles";
 
 const HomePage = () => {
   return (

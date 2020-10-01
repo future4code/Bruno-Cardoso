@@ -1,12 +1,5 @@
-import {
-  AppBar,
-  Button,
-  IconButton,
-  TextField,
-  Typography,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import React from "react";
+import React, { useState } from "react";
+import { AppBar, Button, TextField, Typography } from "@material-ui/core";
 import labedditlogo from "../../assets/labedditlogo.svg";
 import {
   LogoHeader,
@@ -14,23 +7,21 @@ import {
   MainContainer,
   FormPosts,
   PopularPosts,
-  Posts,
-} from "./styled";
+} from "./styles";
+import Post from "../../components/Post/Post";
 
 const FeedPosts = () => {
   return (
     <>
       <AppBar position="static">
         <BoxLogo>
-          <IconButton edge="start" color="inherit">
-            <MenuIcon />
-            <LogoHeader src={labedditlogo} alt={"logo labeddit"} />
-          </IconButton>
+          <LogoHeader src={labedditlogo} alt={"logo labeddit"} />
+
           <Button color="inherit">Logout</Button>
         </BoxLogo>
       </AppBar>
       <MainContainer>
-        <Typography variant="h4">Posts populares</Typography>
+        <Typography variant="h3">Posts populares</Typography>
         <FormPosts>
           <TextField label="Escreva seu Post" multiline variant="outlined" />
           <Button variant="contained" color="primary">
@@ -38,9 +29,7 @@ const FeedPosts = () => {
           </Button>
         </FormPosts>
         <PopularPosts>
-          <Posts>Post1</Posts>
-          <Posts>Post2</Posts>
-          <Posts>Post3</Posts>
+          <Post />
         </PopularPosts>
       </MainContainer>
     </>

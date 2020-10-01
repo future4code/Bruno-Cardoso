@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, LinkTo, Logo, MainContainer } from "../HomePage/styled";
+import { Form, LinkTo, Logo, MainContainer } from "../HomePage/styles";
 import labedditlogo from "../../assets/labedditlogo.svg";
 import { Button, TextField, Typography } from "@material-ui/core";
 
