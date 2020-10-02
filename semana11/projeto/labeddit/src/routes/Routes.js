@@ -24,7 +24,7 @@ const Routes = () => {
         </Route>
       </Switch>
       <Switch>
-        <Route exact path={"/criar-posts"}>
+        <Route exact path={"/posts/comentarios"}>
           <PostPage />
         </Route>
       </Switch>

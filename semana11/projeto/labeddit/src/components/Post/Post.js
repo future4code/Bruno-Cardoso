@@ -3,55 +3,88 @@ import React, { useState } from "react";
 import { Typography } from "@material-ui/core";
 import CloudDownloadRoundedIcon from "@material-ui/icons/CloudDownloadRounded";
 import CloudUploadRoundedIcon from "@material-ui/icons/CloudUploadRounded";
-import { CloudUploadRounded } from "@material-ui/icons";
-import { BoxIcons, Posts } from "./styles";
+import { BoxIcons, Posts, BoxComents, SpaceComent, SpaceIcon } from "./styles";
 
 const Post = () => {
+  //eslint-disable-next-line
   const [posts, setPosts] = useState({
     nomeUsuario: "Usuário",
     textoPost: "TEXTO DO POST",
+    quantidadeVotos: 0,
     quantidadeComentarios: 0,
   });
   return (
     <>
       <Posts>
         <Typography variant="h6">{posts.nomeUsuario}</Typography>
-        <Typography variant="body1">{posts.textoPost}</Typography>
+        <BoxComents>
+          <Typography variant="body1">{posts.textoPost}</Typography>
+        </BoxComents>
         <BoxIcons>
-          <Typography variant="h6">{posts.quantidadeComentarios}</Typography>
-          <CloudUploadRoundedIcon />
-          <Typography variant="h6">{posts.quantidadeComentarios}</Typography>
-          <CloudDownloadRoundedIcon />
+          <SpaceIcon>
+            <CloudUploadRoundedIcon style={{ cursor: "pointer" }} />
+            <Typography variant="h6">{posts.quantidadeVotos}</Typography>
+            <CloudDownloadRoundedIcon style={{ cursor: "pointer" }} />
+          </SpaceIcon>
+          <SpaceComent>
+            <Typography variant="h6">
+              {posts.quantidadeComentarios} comentários
+            </Typography>
+          </SpaceComent>
         </BoxIcons>
       </Posts>
       <Posts>
         <Typography variant="h6">{posts.nomeUsuario}</Typography>
-        <Typography variant="body1">{posts.textoPost}</Typography>
+        <BoxComents>
+          <Typography variant="body1">{posts.textoPost}</Typography>
+        </BoxComents>
         <BoxIcons>
-          <Typography variant="h6">{posts.quantidadeComentarios}</Typography>
-          <CloudUploadRoundedIcon />
-          <Typography variant="h6">{posts.quantidadeComentarios}</Typography>
-          <CloudDownloadRoundedIcon />
+          <SpaceIcon>
+            <CloudUploadRoundedIcon style={{ cursor: "pointer" }} />
+            <Typography variant="h6">{posts.quantidadeVotos}</Typography>
+            <CloudDownloadRoundedIcon style={{ cursor: "pointer" }} />
+          </SpaceIcon>
+          <SpaceComent>
+            <Typography variant="h6">
+              {posts.quantidadeComentarios} comentários
+            </Typography>
+          </SpaceComent>
         </BoxIcons>
       </Posts>
       <Posts>
         <Typography variant="h6">{posts.nomeUsuario}</Typography>
-        <Typography variant="body1">{posts.textoPost}</Typography>
+        <BoxComents>
+          <Typography variant="body1">{posts.textoPost}</Typography>
+        </BoxComents>
         <BoxIcons>
-          <Typography variant="h6">{posts.quantidadeComentarios}</Typography>
-          <CloudUploadRoundedIcon />
-          <Typography variant="h6">{posts.quantidadeComentarios}</Typography>
-          <CloudDownloadRoundedIcon />
+          <SpaceIcon>
+            <CloudUploadRoundedIcon style={{ cursor: "pointer" }} />
+            <Typography variant="h6">{posts.quantidadeVotos}</Typography>
+            <CloudDownloadRoundedIcon style={{ cursor: "pointer" }} />
+          </SpaceIcon>
+          <SpaceComent>
+            <Typography variant="h6">
+              {posts.quantidadeComentarios} comentários
+            </Typography>
+          </SpaceComent>
         </BoxIcons>
       </Posts>
       <Posts>
         <Typography variant="h6">{posts.nomeUsuario}</Typography>
-        <Typography variant="body1">{posts.textoPost}</Typography>
+        <BoxComents>
+          <Typography variant="body1">{posts.textoPost}</Typography>
+        </BoxComents>
         <BoxIcons>
-          <Typography variant="h6">{posts.quantidadeComentarios}</Typography>
-          <CloudUploadRoundedIcon />
-          <Typography variant="h6">{posts.quantidadeComentarios}</Typography>
-          <CloudDownloadRoundedIcon />
+          <SpaceIcon>
+            <CloudUploadRoundedIcon style={{ cursor: "pointer" }} />
+            <Typography variant="h6">{posts.quantidadeVotos}</Typography>
+            <CloudDownloadRoundedIcon style={{ cursor: "pointer" }} />
+          </SpaceIcon>
+          <SpaceComent>
+            <Typography variant="h6">
+              {posts.quantidadeComentarios} comentários
+            </Typography>
+          </SpaceComent>
         </BoxIcons>
       </Posts>
     </>

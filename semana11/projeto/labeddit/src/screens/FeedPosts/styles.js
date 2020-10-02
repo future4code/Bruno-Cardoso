@@ -32,10 +32,10 @@ export const FormPosts = styled(FormControl)`
 
 export const PopularPosts = styled(Box)`
   width: 80vw;
-  padding: 5vh 5vw;
+  padding: 2vh 2vw;
   border: 1px solid #000;
   border-radius: 10px;
   display: flex;
   gap: 3vw;
+  flex-wrap: wrap;
 `;
-
