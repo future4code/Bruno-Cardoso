@@ -1,15 +1,13 @@
 import React from "react";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 import useForm from "../../hooks/useForm";
+import { baseUrl } from "../../services/getRequests";
 import { Form, LinkTo, Logo, MainContainer } from "../HomePage/styles";
 import labedditlogo from "../../assets/labedditlogo.svg";
+
 import { Button, TextField, Typography } from "@material-ui/core";
-import { baseUrl } from "../../services/getRequests";
-import { useHistory } from "react-router-dom";
 import { Link as RouterLink } from "react-router-dom";
-import AlertTitle from "@material-ui/lab/AlertTitle";
-import Alert from "@material-ui/lab/Alert";
-import HomePage from "../HomePage";
 
 const PaginaLogin = React.forwardRef((props, ref) => (
   <RouterLink ref={ref} to="/" {...props} />
@@ -31,10 +29,12 @@ const SignUpPage = () => {
       password: form.password,
       username: form.username,
     };
-    axios.post(`${baseUrl}/signup`, body).then((response) => {
-      history.push("/feed");
-    });
+    axios
+      .post(`${baseUrl}/signup`, body)
+      .then((response) => history.push("/feed"))
+      .catch((error) => console.log(error));
   };
+
   return (
     <>
       <MainContainer>
