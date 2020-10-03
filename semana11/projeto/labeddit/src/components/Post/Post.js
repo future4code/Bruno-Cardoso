@@ -8,88 +8,51 @@ import CloudUploadRoundedIcon from "@material-ui/icons/CloudUploadRounded";
 import { BoxIcons, Posts, BoxComents, SpaceComent, SpaceIcon } from "./styles";
 
 const Post = () => {
-  const [posts, setPosts] = useState({
-    nomeUsuario: "Usuário",
-    textoPost: "TEXTO DO POST",
-    quantidadeVotos: 0,
-    quantidadeComentarios: 0,
-  });
+  const [posts, setPosts] = useState([]);
 
-  
+  useEffect(() => {
+    getPosts();
+  }, []);
+
+  const getPosts = () => {
+    axios
+      .get(`${baseUrl}/posts`, {
+        headers: {
+          authorization: window.localStorage.getItem("token"),
+        },
+      })
+      .then((response) => {
+        setPosts(response.data.posts);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <>
-      <Posts>
-        <Typography variant="h6">{posts.nomeUsuario}</Typography>
-        <BoxComents>
-          <Typography variant="body1">{posts.textoPost}</Typography>
-        </BoxComents>
-        <BoxIcons>
-          <SpaceIcon>
-            <CloudUploadRoundedIcon style={{ cursor: "pointer" }} />
-            <Typography variant="h6">{posts.quantidadeVotos}</Typography>
-            <CloudDownloadRoundedIcon style={{ cursor: "pointer" }} />
-          </SpaceIcon>
-          <SpaceComent>
-            <Typography variant="h6">
-              {posts.quantidadeComentarios} comentários
-            </Typography>
-          </SpaceComent>
-        </BoxIcons>
-      </Posts>
-      <Posts>
-        <Typography variant="h6">{posts.nomeUsuario}</Typography>
-        <BoxComents>
-          <Typography variant="body1">{posts.textoPost}</Typography>
-        </BoxComents>
-        <BoxIcons>
-          <SpaceIcon>
-            <CloudUploadRoundedIcon style={{ cursor: "pointer" }} />
-            <Typography variant="h6">{posts.quantidadeVotos}</Typography>
-            <CloudDownloadRoundedIcon style={{ cursor: "pointer" }} />
-          </SpaceIcon>
-          <SpaceComent>
-            <Typography variant="h6">
-              {posts.quantidadeComentarios} comentários
-            </Typography>
-          </SpaceComent>
-        </BoxIcons>
-      </Posts>
-      <Posts>
-        <Typography variant="h6">{posts.nomeUsuario}</Typography>
-        <BoxComents>
-          <Typography variant="body1">{posts.textoPost}</Typography>
-        </BoxComents>
-        <BoxIcons>
-          <SpaceIcon>
-            <CloudUploadRoundedIcon style={{ cursor: "pointer" }} />
-            <Typography variant="h6">{posts.quantidadeVotos}</Typography>
-            <CloudDownloadRoundedIcon style={{ cursor: "pointer" }} />
-          </SpaceIcon>
-          <SpaceComent>
-            <Typography variant="h6">
-              {posts.quantidadeComentarios} comentários
-            </Typography>
-          </SpaceComent>
-        </BoxIcons>
-      </Posts>
-      <Posts>
-        <Typography variant="h6">{posts.nomeUsuario}</Typography>
-        <BoxComents>
-          <Typography variant="body1">{posts.textoPost}</Typography>
-        </BoxComents>
-        <BoxIcons>
-          <SpaceIcon>
-            <CloudUploadRoundedIcon style={{ cursor: "pointer" }} />
-            <Typography variant="h6">{posts.quantidadeVotos}</Typography>
-            <CloudDownloadRoundedIcon style={{ cursor: "pointer" }} />
-          </SpaceIcon>
-          <SpaceComent>
-            <Typography variant="h6">
-              {posts.quantidadeComentarios} comentários
-            </Typography>
-          </SpaceComent>
-        </BoxIcons>
-      </Posts>
+        {posts.map((post) => {
+          return (
+            <Posts>
+              <Typography variant="h6">{post.username}</Typography>
+              <BoxComents>
+                <Typography variant="body1">{post.text}</Typography>
+              </BoxComents>
+              <BoxIcons>
+                <SpaceIcon>
+                  <CloudUploadRoundedIcon style={{ cursor: "pointer" }} />
+                  <Typography variant="h6">{post.votesCount}</Typography>
+                  <CloudDownloadRoundedIcon style={{ cursor: "pointer" }} />
+                </SpaceIcon>
+                <SpaceComent>
+                  <Typography variant="h6">
+                    {post.commentsCount} comentários
+                  </Typography>
+                </SpaceComent>
+              </BoxIcons>
+            </Posts>
+          );
+        })}
     </>
   );
 };

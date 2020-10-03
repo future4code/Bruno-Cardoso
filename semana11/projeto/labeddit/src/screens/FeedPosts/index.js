@@ -1,6 +1,6 @@
-import React from "react";
-import { AppBar, Button, TextField, Typography } from "@material-ui/core";
+import React, { useState } from "react";
 import labedditlogo from "../../assets/labedditlogo.svg";
+import Post from "../../components/Post/Post";
 import {
   LogoHeader,
   BoxLogo,
@@ -8,7 +8,7 @@ import {
   FormPosts,
   PopularPosts,
 } from "./styles";
-import Post from "../../components/Post/Post";
+import { AppBar, Button, TextField, Typography } from "@material-ui/core";
 
 const FeedPosts = () => {
   return (
