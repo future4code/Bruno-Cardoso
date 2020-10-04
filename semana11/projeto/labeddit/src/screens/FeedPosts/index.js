@@ -4,6 +4,7 @@ import Post from "../../components/Post/Post";
 import useForm from "../../hooks/useForm";
 import { baseUrl } from "../../services/getRequests";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 import {
   LogoHeader,
   BoxLogo,
@@ -19,6 +20,7 @@ const FeedPosts = (props) => {
     title: "",
     text: "",
   });
+  const history = useHistory();
 
   useEffect(() => {
     getPosts();
@@ -78,6 +80,23 @@ const FeedPosts = (props) => {
       });
   };
 
+  const getPostDetail = (postId) => {
+    const token = window.localStorage.getItem("token");
+    axios
+      .get(`${baseUrl}/posts/${postId}`, {
+        headers: {
+          authorization: token,
+        },
+      })
+      .then((response) => {
+        getPosts();
+        history.push("/posts/comentarios");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <>
       <AppBar position="static">
@@ -116,7 +135,14 @@ const FeedPosts = (props) => {
         </FormPosts>
         <PopularPosts>
           {posts.map((post) => {
-            return <Post key={post.id} posts={post} vote={putVotes} />;
+            return (
+              <Post
+                key={post.id}
+                posts={post}
+                vote={putVotes}
+                getDetails={getPostDetail}
+              />
+            );
           })}
         </PopularPosts>
       </MainContainer>

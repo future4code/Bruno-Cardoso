@@ -9,7 +9,7 @@ import { BoxIcons, Posts, BoxComents, SpaceComent, SpaceIcon } from "./styles";
 const Post = (props) => {
   return (
     <>
-      <Posts key={props.posts.id}>
+      <Posts onClick={props.getDetails} key={props.posts.id}>
         <Typography variant="h6">{props.posts.username}</Typography>
         <BoxComents>
           <Typography variant="body1">{props.posts.text}</Typography>

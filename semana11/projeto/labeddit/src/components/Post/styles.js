@@ -9,6 +9,7 @@ export const Posts = styled(Box)`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  cursor: pointer;
 `;
 
 export const BoxComents = styled(Box)`
