@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import labedditlogo from "../../assets/labedditlogo.svg";
 import Post from "../../components/Post/Post";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import {
   LogoHeader,
   BoxLogo,

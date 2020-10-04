@@ -13,7 +13,8 @@ export const Posts = styled(Box)`
 
 export const BoxComents = styled(Box)`
   width: 100%;
-  height: 100%;
+  height: 60%;
+  overflow-y: scroll;
   max-height: 25vh;
   display: flex;
 `;

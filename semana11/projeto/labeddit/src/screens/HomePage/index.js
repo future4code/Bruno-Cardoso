@@ -36,6 +36,7 @@ const HomePage = () => {
 
   return (
     <>
+    
       <MainContainer>
         <Logo src={labedditlogo} alt={"logo labeddit"} />
         <Typography variant="h6">Faça já seu Login</Typography>
