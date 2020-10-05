@@ -14,9 +14,9 @@ const Post = (props) => {
 
   return (
     <>
-      <Posts onClick={goToPostPage}>
+      <Posts>
         <Typography variant="h6">{props.posts.username}</Typography>
-        <BoxComents>
+        <BoxComents onClick={goToPostPage}>
           <Typography variant="body1">{props.posts.text}</Typography>
         </BoxComents>
         <BoxIcons>

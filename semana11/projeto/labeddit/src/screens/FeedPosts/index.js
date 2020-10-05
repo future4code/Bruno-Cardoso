@@ -3,7 +3,6 @@ import Post from "../../components/Post/Post";
 import useForm from "../../hooks/useForm";
 import { baseUrl } from "../../services/getRequests";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
 import { MainContainer, FormPosts, PopularPosts } from "./styles";
 import { Button, TextField, Typography } from "@material-ui/core";
 import Header from "../../components/Header/Header";
@@ -14,7 +13,6 @@ const FeedPosts = (props) => {
     title: "",
     text: "",
   });
-  const history = useHistory();
 
   useEffect(() => {
     getPosts();
@@ -72,10 +70,6 @@ const FeedPosts = (props) => {
       .catch((error) => {
         console.log(error);
       });
-  };
-
-  const goToPostPage = () => {
-    history.push(`/post/${props.post.id}`);
   };
 
   return (
