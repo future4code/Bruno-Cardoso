@@ -24,7 +24,7 @@ const Routes = () => {
         </Route>
       </Switch>
       <Switch>
-        <Route exact path={"/posts/comentarios"}>
+        <Route exact path={"/posts/comentarios/:postId"}>
           <PostPage />
         </Route>
       </Switch>

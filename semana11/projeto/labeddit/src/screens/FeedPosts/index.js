@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from "react";
-import labedditlogo from "../../assets/labedditlogo.svg";
 import Post from "../../components/Post/Post";
 import useForm from "../../hooks/useForm";
 import { baseUrl } from "../../services/getRequests";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import {
-  LogoHeader,
-  BoxLogo,
-  MainContainer,
-  FormPosts,
-  PopularPosts,
-} from "./styles";
-import { AppBar, Button, TextField, Typography } from "@material-ui/core";
+import { MainContainer, FormPosts, PopularPosts } from "./styles";
+import { Button, TextField, Typography } from "@material-ui/core";
+import Header from "../../components/Header/Header";
 
 const FeedPosts = (props) => {
   const [posts, setPosts] = useState([]);
@@ -80,32 +74,13 @@ const FeedPosts = (props) => {
       });
   };
 
-  const getPostDetail = (postId) => {
-    const token = window.localStorage.getItem("token");
-    axios
-      .get(`${baseUrl}/posts/${postId}`, {
-        headers: {
-          authorization: token,
-        },
-      })
-      .then((response) => {
-        getPosts();
-        history.push("/posts/comentarios");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  const goToPostPage = () => {
+    history.push(`/post/${props.post.id}`);
   };
 
   return (
     <>
-      <AppBar position="static">
-        <BoxLogo>
-          <LogoHeader src={labedditlogo} alt={"logo labeddit"} />
-
-          <Button color="inherit">Logout</Button>
-        </BoxLogo>
-      </AppBar>
+      <Header />
       <MainContainer>
         <Typography variant="h3">Posts populares</Typography>
         <FormPosts onSubmit={createPost}>
@@ -135,14 +110,7 @@ const FeedPosts = (props) => {
         </FormPosts>
         <PopularPosts>
           {posts.map((post) => {
-            return (
-              <Post
-                key={post.id}
-                posts={post}
-                vote={putVotes}
-                getDetails={getPostDetail}
-              />
-            );
+            return <Post getPosts={getPosts} key={post.id} posts={post} vote={putVotes} />;
           })}
         </PopularPosts>
       </MainContainer>
