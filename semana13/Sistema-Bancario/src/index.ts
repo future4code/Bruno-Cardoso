@@ -1,4 +1,4 @@
-import express, { Express, Request, Response } from "express";
+import express, { Express, request, Request, Response } from "express";
 import cors from "cors";
 import { accounts } from "./accounts";
 
@@ -10,13 +10,22 @@ app.use(express.json());
 
 app.post("/users/create", (request: Request, response: Response) => {
   try {
-    // validar as entradas da requisição
     //consultar ou alterar a base de dados
     const { name, CPF, dateOfBirthAsString } = request.body;
 
     const [day, month, year] = dateOfBirthAsString.split("/");
 
     const dateOfBirth: Date = new Date(`${year}-${month}-${day}`);
+
+    // validar as entradas da requisição
+    const ageInMiliseconds: number = Date.now() - dateOfBirth.getTime();
+
+    const ageInYears: number = ageInMiliseconds / 1000 / 60 / 60 / 24 / 365;
+
+    if (ageInYears < 18) {
+      response.statusCode = 406;
+      throw new Error("Idade deve ser amior que 18 anos");
+    }
     accounts.push({
       name,
       CPF,
@@ -29,7 +38,19 @@ app.post("/users/create", (request: Request, response: Response) => {
     response.status(201).send("Conta criada com sucesso");
   } catch (error) {
     console.log(error);
-    response.status(400).send(error.message);
+    response.send(error.message);
+  }
+});
+
+app.get("/users/all", (request: Request, response: Response) => {
+  try {
+    if (!accounts.length) {
+      response.statusCode = 404;
+      throw new Error("Nenuhma conta foi encontrada!");
+    }
+    response.status(200).send(accounts);
+  } catch (error) {
+    response.send(error.message);
   }
 });
 
