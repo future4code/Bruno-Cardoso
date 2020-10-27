@@ -261,3 +261,5 @@ d. Procure por algum filme que já tenha lançado, com o termo de busca contido 
 **Resposta**<br>
 
 > SELECT \* FROM Filmes WHERE release_date <= "2020-10-27" AND (title LIKE "%flor%" OR sinopsys LIKE "%flor%") AND rating > 7;
+
+**FIM**
