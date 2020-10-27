@@ -29,6 +29,8 @@ c. O comando DESCRIBE pode ser usado para ver estrutura de uma tabela. Utilize o
 **Resposta**<br>
 _Mostra as colunas criaddas na tabela e mais algumas infos, tais como: **tipo**, se o valor é **null**_.<br>
 
+<li style="text-align: justify;"><br>
+
 a. Escreva uma query que crie a atriz Glória Pires, com o id 002, salário R\$1.200.000 e data de nascimento 23 de Agosto de 1963:<br>
 
 **Resposta**<br>
@@ -42,16 +44,24 @@ a. Escreva uma query que crie a atriz Glória Pires, com o id 002, salário R\$1
 > "female"<br>
 > );<br>
 
-b. Escreva uma query que tente adicionar um outro elemento a tabela com o mesmo id do item anterior 002. Isso gerará um erro. Anote a mensagem de erro, traduza (pode usar o Google Tradutor diretamente) e explique porque esse erro aconteceu.<br>
-
-**Resposta**<br>
-
-> INSERT INTO Actor (id, name, salary, birth_date, gender) VALUES( "002", "Tony Ramos", 400000, >"1948-08-25", "male" ) Error Code: 1062. Duplicate entry '002' for key 'PRIMARY' 0.015 sec
-> Entrada duplicada para a chave PRIMÁRIA "002" ou seja não podem haver entradas com a mesma chave Primária.<br>
-
 b. Escreva uma query que tente adicionar um outro elemento a tabela com o mesmo id do item anterior `002`. Isso gerará um erro. Anote a mensagem de erro, traduza (pode usar o Google Tradutor diretamente) e explique porque esse erro aconteceu.<br>
 
 Tente usar as queries abaixo. Você vai reparar que elas vão gerar um erro. Anote as mensagens de erro, traduza (pode usar o Google Tradutor diretamente) e explique porque esses erros aconteceram. Por fim, corrija individualmente cada query para que funcione, teste o comando e anote-o também como resposta<br>
+
+b. Escreva uma query que tente adicionar um outro elemento a tabela com o mesmo id do item anterior 002. Isso gerará um erro. Anote a mensagem de erro, traduza (pode usar o Google Tradutor diretamente) e explique porque esse erro aconteceu.<br>
+
+> INSERT INTO Actor (id, name, salary, >birth_date, gender)<br>
+> VALUES(<br>
+> "002", <br>
+> "Tony Ramos",<br>
+> 400000,<br>
+> "1948-08-25",<br>
+> "male"<br>
+> );<br>
+
+**Resposta**<br>
+
+> Entrada duplicada para a chave PRIMÁRIA "002" ou seja não podem haver entradas com a mesma chave Primária.<br>
 
 c.<br>
 
@@ -153,6 +163,8 @@ _não existe a coluna nome e sim name_
 
 > SELECT id, name from Actor WHERE id = "002"<br>
 
+<li style="text-align: justify;"><br>
+
 a. Explique com as suas palavras a query acima<br>
 
 > SELECT \* FROM Actor WHERE (name LIKE "A%" OR name LIKE "J%") AND salary > 300000<br>
@@ -178,4 +190,74 @@ d. Escreva uma query com os atores que tenham a lerta "a" ou "A" ou "g" ou "G" n
 
 > SELECT \* FROM Actor WHERE (name LIKE "%g%" OR name LIKE "%G%" OR name LIKE "%a%" OR name LIKE "%A%") AND >salary BETWEEN 350000 AND 900000;<br>
 
+<li style="text-align: justify;"><br>
 
+_a. Escreva a query que cria essa tabela. Para sinopse, utilize o tipo `TEXT`, pesquise sobre ele se precisar. Explique a query resumidamente._
+
+_Crie 4 filmes com as seguintes informações:_
+
+> id: "001",<br>
+> Título: "Se Eu Fosse Você",<br>
+> Sinopse: "Cláudio e Helena são casados há muitos anos e enfrentam a rotina do casamento. Um dia eles são atingidos por um fenômeno inexplicável e trocam de corpos",<br>
+> Data de lançamento: "06/01/2006",<br>
+> Avaliação: 7<br>
+
+**Resposta**<br>
+
+> CREATE TABLE Filmes (<br>
+> id VARCHAR(255) PRIMARY KEY,<br>
+> title VARCHAR (255) NOT NULL,<br>
+> sinopsys TEXT NOT NULL,<br>
+> release_date DATE NOT NULL,<br>
+> rating VARCHAR(6) NOT NULL<br>
+> );<br>
+
+<li style="text-align: justify;"><br>
+
+Escreva uma query que:
+
+a. Retorne o id, título e avaliação a partir de um id específico;<br>
+
+**Resposta**<br>
+
+> SELECT id, title, rating FROM Filmes WHERE id = "004";<br>
+
+b. Retorne um filme a partir de um nome específico;<br>
+
+**Resposta**<br>
+
+> SELECT \* FROM Filmes WHERE title = "Se eu fosse você";<br>
+
+c. Retorne o id, título e sinopse dos filmes com avaliação mínima de 7 <br>
+
+**Resposta**<br>
+
+> SELECT id, title, sinopsys FROM Filmes WHERE rating > 7<br>
+
+<li style="text-align: justify;"><br>
+
+Escreva uma query que:
+
+a. Retorna um filme cujo título contenha a palavra flor<br>
+
+**Resposta**<br>
+
+> SELECT \* FROM Filmes WHERE title LIKE "%flor%";<br>
+
+b. Realize a pesquisa de um filme, ou seja: pesquise se o termo de busca está contido no título ou na sinopse. Utilize qualquer `TERMO DE BUSCA` para exemplificar.<br>
+
+**Resposta**<br>
+
+> SELECT \* FROM Filmes WHERE title LIKE "%Flor%" OR sinopsys LIKE "%Flor%";<br>
+
+c. Procure por todos os filmes que já tenham lançado
+
+**Resposta**<br>
+
+> SELECT \* FROM Filmes WHERE release_date <= "2020-10-27"<br>
+
+d. Procure por algum filme que já tenha lançado, com o termo de busca contido no título ou sinopse e com a avaliação maior do que `7`.
+
+**Resposta**<br>
+
+> SELECT \* FROM Filmes WHERE release_date <= "2020-10-27" AND (title LIKE "%flor%" OR sinopsys LIKE "%flor%") AND rating > 7;
