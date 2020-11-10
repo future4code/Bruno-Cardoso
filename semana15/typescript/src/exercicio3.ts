@@ -1,5 +1,3 @@
-import { type } from "os";
-
 type Post = {
   autor: string;
   texto: string;
