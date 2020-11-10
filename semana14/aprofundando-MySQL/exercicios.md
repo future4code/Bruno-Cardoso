@@ -390,9 +390,9 @@ LIMIT 3;
 _d. Retorne os 3 filmes melhor avalidos_
 
 _Resposta_<br>
+
 ```sql
 SELECT * FROM Moviess
 ORDER BY rating DESC
 LIMIT 3;
 ```
-> SELECT \* FROM Filmes WHERE release_date <= "2020-10-27" AND (title LIKE "%flor%" OR sinopsys LIKE "%flor%") AND rating > 7;
