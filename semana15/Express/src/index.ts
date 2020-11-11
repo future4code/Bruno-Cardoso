@@ -8,7 +8,6 @@ app.use(express.json());
 app.use(cors());
 
 // endpoint 1
-
 app.get("/countries/all", (request: Request, response: Response) => {
   const countryFound = countries.map((country) => ({
     id: country.id,
@@ -19,7 +18,6 @@ app.get("/countries/all", (request: Request, response: Response) => {
 });
 
 // endpoint 2
-
 app.get("/countries/:id", (request: Request, response: Response) => {
   const countryFound: country | undefined = countries.find(
     (country) => country.id === Number(request.params.id)
@@ -31,7 +29,6 @@ app.get("/countries/:id", (request: Request, response: Response) => {
 });
 
 // endpoint 3
-
 app.get("/countries/search", (request, response) => {
   const queryName = request.query.name ? String(request.query.name) : "";
   const queryContinent = request.query.continent
