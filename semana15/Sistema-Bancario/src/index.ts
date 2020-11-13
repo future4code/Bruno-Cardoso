@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // ENDPOINTS
-app.post("/users/create", (request: Request, response: Response) => {
+app.post("/users", (request: Request, response: Response) => {
   try {
     const { name, cpf, dateOfBirthAsString } = request.body;
 
@@ -42,7 +42,7 @@ app.post("/users/create", (request: Request, response: Response) => {
   }
 });
 
-app.get("/users/all", (request: Request, response: Response) => {
+app.get("/users", (request: Request, response: Response) => {
   try {
     if (!users.length) {
       response.statusCode = 404;
@@ -54,19 +54,23 @@ app.get("/users/all", (request: Request, response: Response) => {
   }
 });
 
-app.get("user/balance/:cpf", (request: Request, response: Response) => {
+app.get("/users/query", (request: Request, response: Response) => {
+  const cpf = request.query.cpf;
+  const funds = users.find((user) => user.cpf === cpf);
   try {
-    const findByCpf: UserAccount | undefined = users.find(
-      (account) => account.cpf === request.params.cpf
-    );
-    if (!findByCpf?.cpf) {
-      throw new Error("Cpf não foi encontrado");
+    if (funds?.cpf === cpf) {
+      response.status(200).send(users.map((account) => account.balance));
+    } else {
+      response.statusCode = 404;
+      throw new Error("Cpf não encontrado!");
+      return;
     }
-    response.status(200).send(findByCpf.balance);
   } catch (error) {
     response.send(error.message);
   }
 });
+
+
 
 const server = app.listen(process.env.PORT || 3003, () => {
   if (server) {
