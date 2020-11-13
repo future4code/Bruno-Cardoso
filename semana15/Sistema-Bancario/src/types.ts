@@ -1,13 +1,13 @@
 export type Transaction = {
-  value: number;
-  date: Date;
+  purchasePrice: number;
+  purchaseDate: Date;
   description: string;
 };
 
-export type Account = {
+export type UserAccount = {
   name: string;
-  CPF: string;
-  dateOfBirth: Date;
-  ballance: number;
-  statement: Array<Transaction>;
+  cpf: string;
+  birthDate: Date;
+  balance: number;
+  spending: Transaction[];
 };
