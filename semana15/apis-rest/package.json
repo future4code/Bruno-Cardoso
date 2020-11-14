@@ -1,0 +1,16 @@
+{
+  "name": "apis-rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+    "scripts": {
+      "tools": "clear && npm i express cors && mkdir build src && touch .gitignore ./src/index.ts && tsc --init",
+      "devtools": "clear && npm i @types/cors @types/express typescript @types/node ts-node-dev -D",
+      "start": "tsc && node ./build/index.js",
+      "server": "ts-node-dev ./src/index.ts",
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
