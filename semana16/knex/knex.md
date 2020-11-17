@@ -132,18 +132,50 @@
 
 - Exercício 3
 
-    Está na hora de começar a criar alguns endpoints. O mais simples de todos talvez seja o de pegar o ator pelo `id`.  Queremos criar um método GET que receba como *path param* o *id* do ator cujas informações queremos pegar. Para isso, devemos:
+  Está na hora de começar a criar alguns endpoints. O mais simples de todos talvez seja o de pegar o ator pelo `id`. Queremos criar um método GET que receba como _path param_ o _id_ do ator cujas informações queremos pegar. Para isso, devemos:
 
-    - Usar a função `get` do express
-    - Definir o *path param* com a **chave id: `/actor/:id`.** Dessa forma, poderemos acessar o endpoint assim: `http://localhost:3000/user/id-do-usuario`
+  - Usar a função `get` do express
+  - Definir o _path param_ com a **chave id: `/actor/:id`.** Dessa forma, poderemos acessar o endpoint assim: `http://localhost:3000/user/id-do-usuario`
+
+  a. Crie um endpoint com as especificações acima
+
+  ```tsx
+  export async function getActorById(
+    request: Request,
+    response: Response
+  ): Promise<void> {
+    try {
+      const actor = await dbSelectActorById(request.params.id);
+      if (!actor) {
+        response.status(404).send({
+          message: "Ator não encontrado!",
+        });
+        return;
+      }
+      response.status(200).send({
+        id: actor.id,
+      });
+    } catch (error) {
+      response.status(404).send({
+        message: error.message || error.sqlMessage,
+      });
+    }
+  }
+  ```
+
+  b. Crie um endpoint agora com as seguintes especificações:
+
+  - Deve ser um GET (`/actor`)
+  - Receber o gênero como um _query param_ (`/actor?gender=`)
+  - Devolver a quantidade de atores/atrizes desse gênero
 
     ```tsx
-    app.get("/actor/:id", async (req: Request, res: Response) => {
+    app.get("/actor", async (req: Request, res: Response) => {
       try {
-        const id = req.params.id;
-        const actor = await getActorById(id);
-
-        res.status(200).send(actor)
+        const count = await countActors(req.query.gender as string);
+        res.status(200).send({
+          quantity: count,
+        });
       } catch (err) {
         res.status(400).send({
           message: err.message,
@@ -152,27 +184,72 @@
     });
     ```
 
-    a. Crie um endpoint com as especificações acima
+    - Exercício 4
 
-    b. Crie um endpoint agora com as seguintes especificações:
+    Para finalizar o estudo, você vai criar mais um endpoint. Só que, antes, queremos dar mais um exemplo. Vamos fazer um endpoint para criar um novo ator. Para isso, devemos:
 
-    - Deve ser um GET (`/actor`)
-    - Receber o gênero como um *query param* (`/actor?gender=`)
-    - Devolver a quantidade de atores/atrizes desse gênero
+    - Definir o método como `PUT`
+    - Criar um path: `/actor`
+    - Receber os parâmetros pelo body
+
+    ````tsx
+    app.put("/actor", async (req: Request, res: Response) => {
+      try {
+        await createActor(
+          req.body.id,
+          req.body.name,
+          req.body.salary,
+          new Date(req.body.dateOfBirth),
+          req.body.salary
+        );
+
+        res.status(200).send();
+      } catch (err) {
+        res.status(400).send({
+          message: err.message,
+        });
+      }
+    });
+
+    Crie um endpoint para cada uma das especificações abaixo:
+
+    - a.
+      - Deve ser um POST (`/actor`)
+      - Receber o salário e o id pelo body
+      - Simplesmente atualizar o salário do ator com id em questão
+    - b.
+
+      - Deve ser um DELETE (`/actor/:id`)
+      - Receber id do ator como _path param_
+      - Simplesmente deletar o ator da tabela
 
     - Dicas
 
-        ```tsx
-        app.get("/actor", async (req: Request, res: Response) => {
-          try {
-            const count = await countActors(req.query.gender as string);
-            res.status(200).send({
-              quantity: count,
-            });
-          } catch (err) {
-            res.status(400).send({
-              message: err.message,
-            });
-          }
+      a.
+
+      app.post("/actor", async (req: Request, res: Response) => {
+        try {
+          await updateSalary(req.body.id, req.body.salary);
+          res.status(200).send({
+            message: "Success",
+          });
+        } catch (err) {
+          res.status(400).send({
+            message: err.message,
+          });
+        }
+      });
+
+    b.
+
+    app.delete("/actor/:id", async (req: Request, res: Response) => {
+      try {
+        await deleteActor(req.params.id);
+      } catch (err) {
+        res.status(400).send({
+          message: err.message,
         });
-        ```
+      }
+    });
+    ```
+    ````
