@@ -253,3 +253,38 @@
     });
     ```
     ````
+
+- Exercício 6
+
+  Especificações do Endpoint:
+
+  - Deve ser um GET (`/movie/all`)
+  - Não recebe nada
+  - Retorna todos os filmes. Ele deve retornar, no máximo, uma lista com 15 itens
+
+    ```
+- Exercício 7
+
+  Especificações do Endpoint:
+
+  - Deve ser um GET (`/movie/search`)
+  - Deve receber o termo de busca como uma query string (`/movie/search?query=`)
+  - Faz a busca entre todos os filmes que tenham o termo de busca no nome ou na sinopse. Além disso, a lista deve vir ordenada pela data de lançamento
+
+  - Dicas
+
+    ```tsx
+    app.get("/movie/search", async (req: Request, res: Response) => {
+      try {
+        const movies = await searchMovie(req.query.query as string);
+
+        res.status(200).send({
+          movies: movies,
+        });
+      } catch (err) {
+        res.status(400).send({
+          message: err.message,
+        });
+      }
+    });
+    ```

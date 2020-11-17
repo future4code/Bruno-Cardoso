@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { dbSelectActorById } from "../databaseHandler/dbSelectActorById";
-import { connection } from "../index";
 
 export async function getActorById(
   request: Request,

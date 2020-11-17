@@ -4,6 +4,7 @@ import knex from "knex";
 import dotenv from "dotenv";
 import { getActorById } from "./handlers/getActorById";
 import { getActorByGender } from "./handlers/getActorByGender";
+import { getAllMovies } from "./handlers/getAllMovies";
 
 dotenv.config();
 
@@ -22,10 +23,12 @@ export const connection = knex({
 
 app.use(express.json());
 
-//endpoints
-
+//endpoints Actor
 app.get("/user/:id", getActorById);
 app.get("/actor", getActorByGender);
+
+//endpoints Movies
+app.get("/movie/all", getAllMovies)
 
 const server = app.listen(process.env.PORT || 3003, () => {
   if (server) {
