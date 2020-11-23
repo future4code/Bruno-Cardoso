@@ -214,13 +214,10 @@
   Para finalizar esse exercício, você vai ter que implementar, a sós, uma nova relação no nosso sistema: os Óscar dos filmes. Armazene o nome do óscar (`Óscar de melhor filme`, `Óscar de melhor direção`, etc) e a data em que o filme o ganhou. Lembre-se que, nesse caso, estamos só considerando o óscar para os filmes.
 
   _a. Que tipo de relação é essa?_
+  M:N
 
   _b. Explicite a query que você usou para criar a tabela_
 
   _c. Crie ao menos 2 óscar para cada um dos filmes_
 
   _d. Faça uma query que retorne todos os filmes e seus respectivos óscar_
-
-  - Dicas
-
-    Como esse é o último exercício da semana, iremos dar apenas uma dica: essa relação é M:N. Por que um óscar pode ser dado a vários filmes (em anos diferentes, obviamente) e um filme também pode ganhar vários óscar.
